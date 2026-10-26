@@ -1,0 +1,703 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 3 - Unit 3: Climate Justice & Global Activism (Lessons 1 & 2)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🌍</span><h1>Unit 3: Climate Justice & Global Activism</h1><p class="sub">Sec 3 - Lessons 1 & 2</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 3 - Unit 3 - Lessons 1 & 2) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["community (n)", "مجتمع"],
+    ["drought (n)", "جفاف"],
+    ["emission (n)", "انبعاث"],
+    ["equity (n)", "إنصاف - عدالة"],
+    ["extreme (adj)", "شديد - متطرف"],
+    ["extreme weather", "طقس قاس / شديد"],
+    ["forecast (n)", "توقع (للطقس)"],
+    ["heat wave (n)", "موجة حر"],
+    ["marginalized (adj)", "مهمش"],
+    ["meteorologist (n)", "خبير أرصاد جوية"],
+    ["pessimistic (adj)", "متشائم"],
+    ["profound (adj)", "عميق / جوهري"],
+    ["resilience (n)", "المرونة"],
+   ["scorching hot (adj)", "شديد الحرارة"],
+    ["tangible (adj)", "ملموس"]
+];
+
+// 2. Compound Nouns
+const compoundNounsData = [
+    ["carbon footprint", "البصمة الكربونية"],
+    ["climate resilience", "المرونة المناخية"],
+    ["energy efficiency", "ترشيد استخدام الطاقة"],
+    ["rainfall pattern", "توزيع الأمطار خلال العام"]
+];
+
+// 3. Weather Vocabulary
+const weatherData = [
+    ["baking (adj)", "شديد الحرارة"],
+    ["boiling (adj)", "شديد الحرارة"],
+    ["chilly (adj)", "بارد قليلاً"],
+    ["foggy (adj)", "ضبابي"],
+    ["freezing cold (adj)", "شديد البرودة"],
+    ["humid (adj)", "رطب"],
+    ["overcast (adj)", "غائم"],
+    ["pouring with rain (adj)", "تمطر بغزارة"],
+    ["stormy (adj)", "عاصف"]
+];
+
+// 4. Key Idioms
+const idiomsData = [
+    ["bear the brunt", "يتحمل العواقب / يتأثر بشدة"],
+    ["face the music", "يتحمل عواقب أفعاله"],
+    ["greenhouse gas emissions", "انبعاثات الغازات الدفيئة"],
+    ["marginalized communities", "مجتمعات مهمشة"],
+    ["shoulder the burden", "يتحمل العبء"],
+    ["take the heat", "يتحمل النقد / الضغط"]
+];
+
+// 5. Accumulative Vocabulary
+const accVocab = [
+    ["activism (n)", "نشاط"],
+    ["ahead (adv)", "مقدماً"],
+    ["announcement (n)", "إعلان"],
+    ["bear-bore-borne (v)", "يتحمل"],
+    ["blame(d) (n-v)", "لوم / يلوم"],
+    ["burden (n)", "عبء - مسؤولية"],
+    ["campaign (n)", "حملة"],
+    ["consequence (n)", "نتيجة - عاقبة"],
+    ["core (n)", "جوهر"],
+    ["creativity (n)", "إبداع"],
+    ["crisis (n)", "أزمة"],
+    ["debate (n)", "مناظرة"],
+    ["dramatic (adj)", "درامي / مفاجئ"],
+    ["dramatically (adv)", "بشكل كبير"],
+    ["emphasize(d) (v)", "يؤكد"],
+    ["flooding (n)", "فيضان"],
+    ["frequent (adj)", "متكرر"],
+    ["global (adj)", "عالمي"],
+    ["globally (adv)", "عالمياً"],
+    ["hopeful (adj)", "متفائل"],
+    ["hurricane (n)", "إعصار"],
+    ["ignore(d) (v)", "يتجاهل"],
+    ["implementation (n)", "تنفيذ"],
+    ["industrialized (adj)", "صناعي"],
+    ["innovate(d) (v)", "يبتكر"],
+    ["innovator (n)", "مبتكر"],
+    ["invest(ed) (v)", "يستثمر"],
+    ["justice (n)", "عدالة"],
+    ["leadership (n)", "قيادة"],
+    ["likely (adj-adv)", "محتمل"],
+    ["low-income (n)", "منخفض الدخل"],
+    ["majority (n)", "أغلبية"],
+    ["method (n)", "طريقة"],
+    ["movement (n)", "حركة"],
+    ["optimistic (adj)", "متفائل"],
+    ["particularly (adv)", "خصوصاً"],
+    ["policy (n)", "سياسة"],
+    ["produce(d) (v)", "ينتج"],
+    ["recycle(d) (v)", "يعيد تدوير"],
+    ["reduction (n)", "تخفيض"],
+    ["responsibility (n)", "مسؤولية"],
+    ["responsibility (n)", "مسؤولية"],
+    ["rising (adj)", "مرتفع - متزايد"],
+    ["risk (n)", "خطر - مخاطرة"],
+    ["serious (adj)", "خطير"],
+    ["sustainable (adj)", "مستدام"],
+    ["threaten(ed) (v)", "يهدد"],
+    ["thunderstorm (n)", "عاصفة رعدية"],
+    ["unequal (adj)", "غير متساوٍ"],
+    ["unheard (adj)", "غير مسموع"],
+    ["various (adj)", "متنوع"]
+];
+
+// 6. Definitions
+const defsData = [
+    {word: "equity (n)", def: "fairness or equal treatment"},
+    {word: "extreme weather", def: "a weather condition that is unusually strong, dangerous, or destructive"},
+    {word: "forecast (n)", def: "the prediction of future weather conditions"},
+    {word: "heat wave (n)", def: "a very long period of dangerously hot weather"},
+    {word: "meteorologist (n)", def: "someone who studies or predicts the weather"},
+    {word: "pessimistic (adj)", def: "expecting a bad or negative outcome"},
+    {word: "scorching (adj)", def: "very hot"}
+];
+
+// 7. Synonyms & Antonyms
+const synData = [
+    {word: "drought (n)", syn: "aridity, dryness"},
+    {word: "equity (n)", syn: "fairness, justice"},
+    {word: "emphasize (v)", syn: "stress, highlight, underline, reinforce"},
+    {word: "extreme (adj)", syn: "intense, severe, excessive"},
+    {word: "marginalized (adj)", syn: "neglected, disadvantaged, subordinated, overlooked"},
+    {word: "pessimistic (adj)", syn: "gloomy, negative, hopeless, desperate"},
+    {word: "profound (adj)", syn: "deep, meaningful, intense"},
+    {word: "scorching hot (adj)", syn: "burning hot, intensely hot"},
+    {word: "tangible (adj)", syn: "concrete, visible, real, measurable"}
+];
+
+const antData = [
+    {word: "emphasize (v)", ant: "understate, downplay, minimize, ignore"},
+    {word: "equity (n)", ant: "inequality, injustice"},
+    {word: "extreme (adj)", ant: "moderate, mild"},
+    {word: "marginalized (adj)", ant: "included, empowered, accepted, focused"},
+    {word: "pessimistic (adj)", ant: "optimistic, hopeful, positive, confident"},
+    {word: "profound (adj)", ant: "superficial, trivial"},
+    {word: "scorching hot (adj)", ant: "freezing, chilly"},
+    {word: "tangible (adj)", ant: "intangible, abstract, theoretical, invisible"}
+];
+
+// 8. Collocations
+const collocationsData = [
+    ["administer medication", "يعطي دواء"],
+    ["give a voice (to)", "يعطي صوتاً (لـ)"],
+    ["run campaigns", "يدير حملات"],
+    ["take precautions", "يأخذ احتياطات"],
+    ["(for) responsibility (for)", "يتحمل المسؤولية"],
+    ["shoulder the burden", "يتحمل العبء"]
+];
+
+// 9. Expressions & Prepositions
+const exprData = [
+    ["as a result", "ونتيجة لذلك"],
+    ["at its core", "في جوهره"],
+    ["at risk", "معرض للخطر"],
+    ["even though", "على الرغم من"],
+    ["go off", "ينطلق (المنبه)"],
+    ["invest in", "يستثمر في"],
+    ["look for", "يبحث عن"],
+    ["developing nations", "الدول النامية"],
+    ["to what extent", "إلى أي مدى"],
+    ["fill in", "يملأ (استمارة)"],
+    ["take part (in)", "يشارك (في)"],
+    ["watch for", "يراقب / يترقب"]
+];
+
+// 10. Verb + Prepositions
+const phrasalVerbsData = [
+    ["fill in", "يملأ (استمارة)"],
+    ["go off", "ينطلق (المنبه)"],
+    ["invest in", "يستثمر في"],
+    ["look for", "يبحث عن"],
+    ["take part (in)", "يشارك (في)"],
+    ["watch for", "يراقب / يترقب"]
+];
+
+// 11. Derivatives
+const derivativesData = [
+    {word: "equity", forms: ["equity (n)", "equitable (adj)", "equitably (adv)"], ex: "Equity in rights ensures equal opportunities for all citizens. / I think this is an equitable solution. / Meals are equitably shared among us."},
+    {word: "extreme", forms: ["extreme (adj)", "extremely (adv)", "extremity (n)", "extremist (n - adj)"], ex: "Extreme weather events are becoming more common. / The temperatures this summer are extremely high. / The climber reached the extremity of the mountain. / We refuse this extremist behavior."},
+    {word: "emission", forms: ["emission (n)", "emit (v)", "emitted (adj)"], ex: "Carbon emissions lead to climate change. / Factories emit large amounts of smoke. / Planes are one of the emitters of smoke."},
+    {word: "marginalize", forms: ["marginalize (v)", "marginalization (n)", "marginalized (adj)", "marginal (adj)"], ex: "Society should not marginalize poor people. / Marginalization often leads to inequality. / Marginalized communities need more support. / He lives in a marginal area with little access to services."},
+    {word: "pessimistic", forms: ["pessimistic (adj)", "pessimism (n)"], ex: "Being pessimistic is a negative feeling. / Pessimism stops people from trying new things."},
+    {word: "profound", forms: ["profound (adj)", "profoundly (adv)"], ex: "He gave a profound talk about justice. / Covid-19 profoundly affected the whole world."},
+    {word: "scorch", forms: ["scorch (v)", "scorching (adj)", "scorched (adj)"], ex: "The fire scorched thousands of hectares of forest. / The people of Aswan suffer from the scorching sun. / The plants looked scorched after the heatwave."}
+];
+
+// 12. Clear the Confusion
+const confusionData = [
+    {word: "climate - weather", forms: ["climate (n)", "weather (n)"], ex: "Egypt has a dry desert climate. / The weather today is sunny and hot."},
+    {word: "drought - draught", forms: ["drought (n)", "draught (n)"], ex: "The farmers suffered during the long drought. / Close the window – there's a cold draught coming in."},
+    {word: "equality - equity - fairness - justice", forms: ["equality (n)", "equity (n)", "fairness (n)", "justice (n)"], ex: "Equality gives the same tools to everyone. / Equity means giving extra help to those who need it. / The teacher graded the papers with fairness. / They demanded justice after the unfair treatment."},
+    {word: "forecast - predict", forms: ["forecast (v)", "predict (v)"], ex: "Rain was forecast for the weekend. / Experts predict that sea levels will rise in 50 years."}
+];
+
+// 13. Reading Text (Lesson 1)
+const readingTextL1 = [
+    {en: "Climate change must be seen not only as an environmental crisis, but also as a profound issue of global justice.", ar: "يجب النظر إلى تغير المناخ ليس فقط على أنه أزمة بيئية، بل أيضاً كقضية عميقة تتعلق بالعدالة العالمية."},
+    {en: "While industrialized nations are largely responsible for the majority of greenhouse gas emissions, it is often low-income and marginalized communities in the Global South - that bear the brunt of its consequences.", ar: "بينما تتحمل الدول الصناعية مسؤولية الجزء الأكبر من انبعاثات غازات الدفيئة، فغالباً ما تكون المجتمعات منخفضة الدخل والمهمشة في الجنوب العالمي - هي التي تتحمل وطأة عواقبها."},
+    {en: "These populations might face rising sea levels, long droughts, food shortage, and extreme weather events that threaten their health, and safety.", ar: "قد تواجه هذه الفئات السكانية ارتفاع مستويات سطح البحر، وحالات جفاف طويلة، ونقصاً في الغذاء، وأحداثاً مناخية قاسية تهدد صحتهم وسلامتهم."},
+    {en: "Climate justice emphasizes that we cannot ignore these effects. It calls for fair policies, shared decisions, and cooperation to fix the unequal burdens of climate change.", ar: "تؤكد العدالة المناخية على أننا لا نستطيع تجاهل هذه التأثيرات. تدعو إلى سياسات عادلة، وقرارات مشتركة، وتعاون لإصلاح الأعباء غير المتكافئة لتغير المناخ."},
+    {en: "People who cause the least damage must not suffer the most. Youth around the world are actively working to stop climate change, showing great leadership and creativity.", ar: "يجب ألا يعاني الأشخاص الذين يتسببون في أقل ضرر أكثر من غيرهم. يعمل الشباب حول العالم بنشاط لوقف تغير المناخ، مظهرين قيادة وإبداعاً عظيمين."},
+    {en: "One initiative is the 'Youth Climate Lab' which empowers young innovators to develop solutions for climate challenges, such as creating sustainable energy projects or designing waste reduction programs.", ar: "إحدى المبادرات هي 'مختبر المناخ للشباب' الذي يمكّن المبتكرين الشباب من تطوير حلول لتحديات المناخ، مثل إنشاء مشاريع طاقة مستدامة أو تصميم برامج للحد من النفايات."},
+    {en: "Their efforts have resulted in tangible changes, like the implementation of community solar projects and successful recycling campaigns in various regions.", ar: "أسفرت جهودهم عن تغييرات ملموسة، مثل تنفيذ مشاريع الطاقة الشمسية المجتمعية وحملات إعادة التدوير الناجحة في مناطق مختلفة."},
+    {en: "At its core, climate justice is about equity, responsibility, and giving a voice to those who are often unheard in global debates. Without justice, there can be no true solution to the climate crisis.", ar: "في جوهرها، تتعلق العدالة المناخية بالإنصاف والمسؤولية وإعطاء صوت لأولئك الذين غالباً لا يُسمع صوتهم في المناقشات العالمية. بدون عدالة، لا يمكن أن يكون هناك حل حقيقي لأزمة المناخ."}
+];
+
+// 14. Listening Text (Lesson 2)
+const listeningTextL2 = [
+    {en: "Presenter: Good evening, listeners. With the recent scorching heat across Egypt, one topic everyone's talking about is – yes, you guessed it – the weather. Joining us today in the studio is meteorologist Tamer Mansour. Earlier, we asked you to share your questions, and now Tamer is here to answer a few. Welcome, Tamer!", ar: "المقدم: مساء الخير أيها المستمعون. مع موجة الحر الشديدة الأخيرة في مصر، هناك موضوع يتحدث عنه الجميع - نعم، لقد خمنتم - الطقس. ينضم إلينا اليوم في الاستوديو خبير الأرصاد الجوية تامر منصور. في وقت سابق، طلبنا منكم مشاركة أسئلتكم، والآن تامر هنا للإجابة على بعض منها. مرحباً تامر!"},
+    {en: "Tamer: Thanks! Great to be here.", ar: "تامر: شكراً! من الرائع التواجد هنا."},
+    {en: "Presenter: First question from our audience: What's the difference between a meteorologist and a weather presenter?", ar: "المقدم: السؤال الأول من جمهورنا: ما الفرق بين خبير الأرصاد الجوية ومقدم الطقس؟"},
+    {en: "Tamer: Well, a meteorologist collects and analyzes weather data, while a presenter simply delivers that information, usually on TV or radio. Some presenters are trained meteorologists, but not many.", ar: "تامر: حسناً، يقوم خبير الأرصاد الجوية بجمع وتحليل بيانات الطقس، بينما يقوم مقدم الطقس ببساطة بنقل هذه المعلومات، عادةً على التلفزيون أو الراديو. بعض مقدمي الطقس هم خبراء أرصاد مدربون، لكن ليس العديد منهم."},
+    {en: "Presenter: And how far ahead can you predict the weather?", ar: "المقدم: وإلى أي مدى يمكنك توقع الطقس؟"},
+    {en: "Tamer: Usually five to seven days. But some weather types are easier to predict than others.", ar: "تامر: عادةً من خمسة إلى سبعة أيام. لكن بعض أنواع الطقس أسهل في التنبؤ من غيرها."},
+    {en: "Presenter: Have you noticed any changes in Egypt's weather over the last decade?", ar: "المقدم: هل لاحظت أي تغييرات في طقس مصر خلال العقد الماضي؟"},
+    {en: "Tamer: Not dramatically – but this year's heatwave is unusual. Extreme weather might be becoming more frequent globally, and it certainly seems to be getting hotter.", ar: "تامر: ليس بشكل كبير - لكن موجة الحر هذا العام غير عادية. قد يصبح الطقس القاسي أكثر تكراراً على مستوى العالم، وبالتأكيد يبدو أنه يزداد سخونة."},
+    {en: "Presenter: Are you optimistic about climate change?", ar: "المقدم: هل أنت متفائل بشأن تغير المناخ؟"},
+    {en: "Tamer: Honestly, I'm a bit pessimistic. In Egypt, we'll likely face more extreme heatwaves in the future.", ar: "تامر: بصراحة، أنا متشائم قليلاً. في مصر، سنواجه على الأرجح المزيد من موجات الحر الشديدة في المستقبل."},
+    {en: "Presenter: Thanks, Tamer. Fascinating insights, and hopefully cooler weather soon!", ar: "المقدم: شكراً تامر. رؤى رائعة، ونأمل أن يكون الطقس أكثر برودة قريباً!"}
+];
+
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (keyVocab && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary (Lessons 1 & 2)</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Compound Nouns
+    if (compoundNounsData && compoundNounsData.length > 0) {
+        sections.push({ title:"🧩 Compound Nouns", id:"secCompoundNouns", content: `<div class="rules-grid">${compoundNounsData.map((c,i) => makeRuleItem('🧩', 'secCompoundNouns', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 3. Weather Vocabulary
+    if (weatherData && weatherData.length > 0) {
+        sections.push({ title:"🌡️ Weather Vocabulary", id:"secWeather", content: `<div class="rules-grid">${weatherData.map((w,i) => makeRuleItem('🌡️', 'secWeather', i, w[0], w[1], w[0])).join('')}</div>` });
+    }
+
+    // 4. Key Idioms
+    if (idiomsData && idiomsData.length > 0) {
+        sections.push({ title:"💡 Key Idioms", id:"secIdioms", content: `<div class="rules-grid">${idiomsData.map((e,i) => makeRuleItem('✨', 'secIdioms', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 5. Accumulative Vocabulary
+    if (accVocab && accVocab.length > 0) {
+        sections.push({ title:"📚 Accumulative Vocabulary", id:"secAccVocab", content: `<div class="info-box"><div class="info-title">Accumulative Vocabulary</div><div class="vocab">${makePills(accVocab, "secAccVocab")}</div></div>` });
+    }
+
+    // 6. Definitions
+    if (defsData && defsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${defsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    // 7. Synonyms & Antonyms
+    if (synData && synData.length > 0) {
+        sections.push({ title:"🔄 Synonyms", id:"secSyn", content: `<div class="rules-grid">${synData.map((s,i) => makeRuleItem('↔️', 'secSyn', i, s.word + " | " + s.syn, s.syn, s.word)).join('')}</div>` });
+    }
+    if (antData && antData.length > 0) {
+        sections.push({ title:"🚫 Antonyms", id:"secAnt", content: `<div class="rules-grid">${antData.map((a,i) => makeRuleItem('🛑', 'secAnt', i, a.word + " | " + a.ant, a.ant, a.word)).join('')}</div>` });
+    }
+
+    // 8. Collocations
+    if (collocationsData && collocationsData.length > 0) {
+        sections.push({ title:"🔗 Collocations", id:"secCollocations", content: `<div class="rules-grid">${collocationsData.map((c,i) => makeRuleItem('🔗', 'secCollocations', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 9. Expressions & Prepositions
+    if (exprData && exprData.length > 0) {
+        sections.push({ title:"💬 Expressions & Prepositions", id:"secExpr", content: `<div class="rules-grid">${exprData.map((e,i) => makeRuleItem('💡', 'secExpr', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 10. Verb + Prepositions
+    if (phrasalVerbsData && phrasalVerbsData.length > 0) {
+        sections.push({ title:"⚡ Verb + Prepositions", id:"secPhrasal", content: `<div class="rules-grid">${phrasalVerbsData.map((p,i) => makeRuleItem('⚡', 'secPhrasal', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 11. Derivatives
+    if (derivativesData && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 12. Clear the Confusion
+    if (confusionData && confusionData.length > 0) {
+        sections.push({ title:"🧐 Clear the Confusion", id:"secConfusion", content: `<div class="rules-grid">${confusionData.map((c,i) => {
+            const speakText = `${c.word} | ${c.forms}`;
+            const displayText = `${c.word} : ${c.forms}`;
+            return makeRuleItem('🧐', 'secConfusion', i, speakText, c.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 13. Reading Text (Lesson 1)
+    if (readingTextL1 && readingTextL1.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 1)", id:"secReadL1", content: makeStorySection("Climate Justice and Global Activism", readingTextL1) });
+    }
+
+    // 14. Listening Text (Lesson 2)
+    if (listeningTextL2 && listeningTextL2.length > 0) {
+        sections.push({ title:"🎧 Listening Text (Lesson 2)", id:"secListenL2", content: makeStorySection("An Interview with a Meteorologist", listeningTextL2) });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

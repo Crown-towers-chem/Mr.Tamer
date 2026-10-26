@@ -1,0 +1,471 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Vocab Master - The Count of Monte Cristo (Chapter 5)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #004d40; --A2: #00695c; --blue4: #b2dfdb; --blue5: #f0f7f6;
+            --text: #1E293B; --text2: #546e7a; --card: #ffffff; --border: #cfd8dc;
+            --bg: #f3f4f7; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(0, 77, 64, 0.08);
+            --word-highlight: #ffc107;
+            --fab-bg: #263238; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.5rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:900px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);max-width:200px;}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:900px;margin:auto;padding:0 16px;}
+
+        .chapter-divider{text-align:center;margin:34px auto 18px;padding:14px 30px;background:linear-gradient(135deg,var(--A),var(--A2));border-radius:12px;max-width:640px;box-shadow:0 6px 16px rgba(0,0,0,.12);}
+        .chapter-divider h2{margin:0;font-size:22px;color:#fff;font-weight:900;letter-spacing:1px;}
+        .chapter-divider p{margin:4px 0 0;font-size:15px;color:#fff;opacity:.9;font-weight:700;}
+
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:100px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        .rule-item.story-heading{background:linear-gradient(135deg, var(--A), var(--A2)); border:none;}
+        .rule-item.story-heading .rule-text .en{color:#fff;font-size:16px;font-weight:900;}
+        .rule-item.story-heading .rule-text .ar{color:rgba(255,255,255,0.9);font-size:14px;font-weight:700;}
+        .sentence.active-sent, .pill.active-sent, .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .word.highlight, .rule-item .word.highlight, .pill .word.highlight{background:var(--word-highlight);}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🏰</span><h1>Vocab Master</h1><p class="sub">The Count of Monte Cristo - Chapter 5: Lessons in the Cell</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' ');
+    result = result.replace(/[→]/g, ' ');
+    result = result.replace(/\s+/g, ' ').trim();
+    return result;
+}
+
+// ===================== بيانات المحتوى (The Count of Monte Cristo - Chapter 5) =====================
+
+const chaptersData = [
+{
+    number: 5,
+    title: "Lessons in the Cell",
+    vocab: [
+        ["astronomy (n)", "علم الفلك"], ["bond (n)", "رابطة / صلة"], ["betray (ed) (v)", "يخون / يغدر"],
+        ["calculate (v)", "يحسب"], ["companion (n)", "رفيق / صاحب"], ["consume (d) (v)", "يستهلك / يستغرق"],
+        ["crawl (ed) (v)", "يزحف"], ["crevice (n)", "صدع / شق"], ["destiny (n)", "مصير / قدر"],
+        ["deepen (ed) (v)", "يزداد"], ["despair (n)", "يأس"], ["escape (d) (n/v)", "هروب / يهرب"],
+        ["examine (d) (v)", "يفحص / يدقق"], ["expose (d) (v)", "يكشف / يُوضح"], ["fast (adj)", "سريع"],
+        ["fade (d) (v)", "يتلاشى / يذبل"], ["firm (adj)", "ثابت / جازم"], ["fits (n)", "نوبات (مرضية)"],
+        ["fluency (n)", "طلاقة"], ["freedom (n)", "حرية"], ["geometry (n)", "علم الهندسة"],
+        ["guidance (n)", "توجيه / إرشاد"], ["hatred (n)", "كراهية / حقد"], ["interrogation (n)", "استجواب"],
+        ["justice (n)", "عدالة / إنصاف"], ["knowledge (n)", "معرفة / علم"], ["logic (n)", "منطق"],
+        ["lame (adj)", "أعرج"], ["mysterious (adj)", "غامض"], ["parchment (n)", "رق / مخطوطة جلدية"],
+        ["plan (n)", "خطة"], ["plot (n)", "مؤامرة"], ["promotion (n)", "ترقية"],
+        ["punish (v)", "يعاقب"], ["rage (n)", "غضب"], ["ray (n)", "شعاع"],
+        ["recount (ed) (v)", "يسرد / يقص"], ["ruin (n)", "هلاك / دمار"], ["secret (n)", "سر"],
+        ["seize (d) (v)", "يستولي / يصادر"], ["silence (d) (v)", "يسكت / يخمد"], ["soar (ed) (v)", "يرتفع / يحلق"],
+        ["sorrow (n)", "حزن"], ["scold (n)", "سجن"], ["imprisonment (n)", "سجن / حبس"]
+    ],
+    definitions: [
+        {word: "tunnel", def: "a passage dug underground"},
+        {word: "wisdom", def: "knowledge combined with good judgment"},
+        {word: "companion", def: "a close friend who shares time with you"},
+        {word: "escape", def: "the act of getting free from danger or prison"},
+        {word: "treasure", def: "a secret or hidden collection of riches"},
+        {word: "guidance", def: "advice or direction to help someone"},
+        {word: "knowledge", def: "facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject"},
+        {word: "justice", def: "just behavior or treatment, the quality of being fair and reasonable"},
+        {word: "vengeance", def: "punishment inflicted or retribution exacted for an injury or wrong"}
+    ],
+    story: [
+        {en: 'Lessons in the Cell', ar: 'دروس في الزنزانة'},
+        {en: 'The days passed quickly now. Each time the guards left, Edmond crawled through the hidden tunnel to the abbé\'s cell, where the old priest gave him lessons. They began with languages. The abbé taught him Italian, English, and Spanish. He showed him how to read and write better French and even taught him Latin. Edmond repeated words until he could speak with fluency.', ar: 'مرت الأيام بسرعة الآن. في كل مرة يغادر فيها الحراس، كان إدموند يزحف عبر النفق المخفي إلى زنزانة الأب، حيث كان الكاهن العجوز يعطيه دروساً. بدأوا باللغات. علمه الأب الإيطالية والإنجليزية والإسبانية. أظهر له كيفية القراءة والكتابة بالفرنسية بشكل أفضل بل وعلمه اللاتينية. كرر إدموند الكلمات حتى أصبح قادراً على التحدث بطلاقة.'},
+        {en: 'Then came history and geography. Faria traced maps of Europe on the dusty floor, explaining how nations rose and fell. He spoke of Rome, Greece, and the empires of the past. Edmond\'s imagination soared; though his body was trapped, his mind traveled across continents and centuries.', ar: 'ثم جاء التاريخ والجغرافيا. رسم فاريا خرائط أوروبا على الأرضية المتربة، شارحاً كيف قامت الأمم وسقطت. تحدث عن روما واليونان وإمبراطوريات الماضي. حلّق خيال إدموند؛ على الرغم من أن جسده كان محبوساً، إلا أن عقله سافر عبر القارات والعصور.'},
+        {en: 'Mathematics followed—numbers, geometry, and astronomy. Edmond learned how to measure the stars, how to calculate distances, how to reason with logic. \'You see,\' said the abbé, \'knowledge is power. If you escape this place, you will not only be a free man but a man armed with wisdom.\'', ar: 'تبعتها الرياضيات - الأرقام والهندسة وعلم الفلك. تعلم إدموند كيفية قياس النجوم، وكيفية حساب المسافات، وكيفية التفكير بالمنطق. \'أترى،\' قال الأب، \'المعرفة قوة. إذا هربت من هذا المكان، لن تكون رجلاً حراً فحسب، بل رجلاً مسلحاً بالحكمة.\''},
+        {en: 'The Father He Never Had', ar: 'الأب الذي لم يكن له'},
+        {en: 'More than lessons, Abbé Faria gave Edmond something he had lost: a father. \'My poor father died alone while I was imprisoned,\' Edmond once said with sorrow. The abbé placed a hand on his shoulder. \'Then let me be your father now. God has sent us to each other in this place. You will be my son, and I will be your teacher.\'', ar: 'أكثر من الدروس، أعطى الأب فاريا إدموند شيئاً فقده: أباً. \'مات أبي المسكين وحيداً بينما كنت مسجوناً،\' قال إدموند ذات مرة بحزن. وضع الأب يده على كتفه. \'إذن دعني أكون أباك الآن. لقد أرسلنا الله لبعضنا في هذا المكان. ستكون ابني، وسأكون معلمك.\''},
+        {en: 'From that moment, their bond deepened. Edmond found in the abbé not only knowledge, but love, patience, and guidance.', ar: 'من تلك اللحظة، تعمقت علاقتهما. وجد إدموند في الأب ليس فقط المعرفة، بل الحب والصبر والإرشاد.'},
+        {en: 'The Mystery of His Betrayal', ar: 'لغز خيانته'},
+        {en: 'With Faria\'s help, Edmond began to examine the events that had led to his imprisonment. The abbé listened carefully as Edmond recounted his arrest, Villefort\'s interrogation, and the mysterious letter. The old priest\'s sharp mind connected the pieces. \'Do you not see?\' he said. \'It was not chance. It was a plot. Danglars, who envied your promotion to captain, and Fernand, who desired Mercédès, worked together to destroy you. Villefort, fearing the letter would expose his own father\'s politics, silenced you. Each man had something to gain from your ruin.\'', ar: 'بمساعدة فاريا، بدأ إدموند في فحص الأحداث التي أدت إلى سجنه. استمع الأب بعناية بينما روى إدموند اعتقاله، واستجواب فيلفور، والرسالة الغامضة. ربط عقل الكاهن العجوز الحاد القطع. \'ألا ترى؟\' قال. \'لم يكن صدفة. كانت مؤامرة. دانغلار، الذي حسد ترقيتك إلى قبطان، وفيرناند، الذي رغب في مرسيدس، عملا معاً لتدميرك. فيلفور، خوفاً من أن تكشف الرسالة سياسات والده، أسكتك. كل رجل كان لديه ما يكسبه من خرابك.\''},
+        {en: 'Edmond\'s eyes widened. Until now, he had thought it was just a mistake. But hearing the priest\'s explanation, he understood the truth: he had been betrayed.', ar: 'اتسعت عينا إدموند. حتى الآن، ظن أنها مجرد خطأ. لكن عند سماع شرح الكاهن، فهم الحقيقة: لقد خُدِع.'},
+        {en: 'His heart burned with anger, but the abbé placed a firm hand on his arm. \'Do not let hatred consume you, my son. Knowledge and patience are stronger than rage. One day, justice will come, but it must be guided by wisdom.\'', ar: 'احترق قلبه بالغضب، لكن الأب وضع يداً ثابتة على ذراعه. \'لا تدع الكراهية تستهلكك يا بني. المعرفة والصبر أقوى من الغضب. يوماً ما، ستأتي العدالة، لكن يجب أن تكون موجهة بالحكمة.\''},
+        {en: 'The abbé smiled. \'Because I see in you a good heart. You were betrayed, yet you remain noble. God has chosen you for this destiny.\'', ar: 'ابتسم الأب. \'لأنني أرى فيك قلباً طيباً. لقد خُنت، ومع ذلك تظل نبيلاً. لقد اختارك الله لهذا المصير.\''},
+        {en: 'The Priest\'s Illness', ar: 'مرض الكاهن'},
+        {en: 'But even as hope grew, Edmond noticed the abbé\'s health fading. Terrible fits seized him, leaving him pale and trembling. His strength weakened, and though he smiled bravely, Edmond saw fear in his eyes.', ar: 'ولكن حتى مع نمو الأمل، لاحظ إدموند تدهور صحة الأب. أصابته نوبات رهيبة، تاركة إياه شاحباً ومرتجفاً. ضعفت قوته، ورغم أنه ابتسم بشجاعة، رأى إدموند الخوف في عينيه.'},
+        {en: '\'Do not be afraid,\' Edmond said. \'I will care for you as you cared for me.\'', ar: '\'لا تخف،\' قال إدموند. \'سأعتني بك كما اعتنيت بي.\''},
+        {en: 'The priest shook his head gently. \'No, my son. My time will soon end. But your life is just beginning. You must prepare for freedom and for the treasure.\' He gave Edmond a small piece of parchment, carefully hidden in the lining of his clothes. On it was the secret map of Monte Cristo. Edmond pressed it to his heart.', ar: 'هز الكاهن رأسه بلطف. \'لا يا بني. وقتي سينتهي قريباً. لكن حياتك بدأت للتو. يجب أن تستعد للحرية وللكنز.\' أعطى إدموند قطعة صغيرة من الرق، مخبأة بعناية في بطانة ملابسه. كانت عليها خريطة مونت كريستو السرية. ضغط عليها إدموند على قلبه.'},
+        {en: 'The Escape Plan', ar: 'خطة الهروب'},
+        {en: 'Together they continued to dig. The tunnel grew longer, reaching toward the sea. They planned to escape side by side, swimming to the shore, then sailing away. But one night, as they worked, the abbé collapsed, gasping for breath. Edmond lifted him in his arms, but the priest\'s face was pale and his voice weak.', ar: 'معاً استمرا في الحفر. نما النفق أطول، واصلاً نحو البحر. خططا للهروب جنباً إلى جنب، والسباحة إلى الشاطئ، ثم الإبحار بعيداً. لكن في إحدى الليالي، بينما كانا يعملان، انهار الأب، يلهث لالتقاط الأنفاس. رفعه إدموند بين ذراعيه، لكن وجه الكاهن كان شاحباً وصوته ضعيفاً.'},
+        {en: '\'My dear Edmond,\' he whispered, \'if I die, promise me that you will not give in to despair. Live, escape, and use the treasure for justice, not for vengeance alone.\'', ar: '\'عزيزي إدموند،\' همس، \'إذا مت، عِدني بأنك لن تستسلم لليأس. عش، اهرب، واستخدم الكنز من أجل العدالة، وليس للانتقام فقط.\''},
+        {en: 'Edmond wept but swore the promise.', ar: 'بكى إدموند لكنه أقسم بالوعد.'},
+        {en: 'Wisdom That Remains', ar: 'الحكمة التي تبقى'},
+        {en: 'The abbé knew the end was near. In his final days, he spoke not of riches, but of wisdom. \'Remember, my son,\' he said, \'true greatness is not in wealth, but in how you use it. The world is full of men who destroy, but few who build. Be among the builders. Forgive when you can, but punish when you must. Above all, never lose your soul in the fire of revenge.\'', ar: 'عرف الأب أن النهاية قريبة. في أيامه الأخيرة، لم يتحدث عن الغنى، بل عن الحكمة. \'تذكر يا بني،\' قال، \'العظمة الحقيقية ليست في الثروة، بل في كيفية استخدامك لها. العالم مليء بالرجال الذين يدمرون، لكن قلة هم الذين يبنون. كن من بين البنائين. سامح عندما تستطيع، لكن عاقب عندما يجب. فوق كل شيء، لا تخسر روحك أبداً في نار الانتقام.\''},
+        {en: 'Edmond listened carefully, memorizing each word as if it were sacred scripture.', ar: 'استمع إدموند بعناية، محافظاً على كل كلمة في ذاكرته كما لو كانت نصاً مقدساً.'},
+        {en: 'The Final Gift', ar: 'الهدية الأخيرة'},
+        {en: 'At last, one quiet evening, Abbé Faria closed his eyes for the last time. His hand rested in Edmond\'s, his face peaceful.', ar: 'أخيراً، في أحد الأمسيات الهادئة، أغمض الأب فاريا عينيه للمرة الأخيرة. استقرت يده في يد إدموند، ووجهه هادئ.'},
+        {en: 'Edmond knelt by his side, his heart breaking. \'Father, teacher, friend—what will I do without you?\'', ar: 'جثا إدموند بجانبه، وقلبه ينكسر. \'أبي، معلمي، صديقي - ماذا سأفعل بدونك؟\''},
+        {en: 'Yet even in death, the old priest\'s presence remained. His lessons, his love, and his secret had transformed Edmond from a simple sailor into a man of learning, purpose, and destiny.', ar: 'وحتى في الموت، ظل حضور الكاهن العجوز قائماً. دروسه وحبه وسره قد حولوا إدموند من بحار بسيط إلى رجل من التعلم والغاية والمصير.'},
+        {en: 'Edmond wiped his tears, clutching the map of Monte Cristo. \'I will escape. I will live. And I will honor your name.\'', ar: 'مسح إدموند دموعه، ممسكاً بخريطة مونت كريستو. \'سأهرب. سأعيش. وسأكرم اسمك.\''}
+    ]
+}
+];
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText, isHeading=false) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        const extraClass = isHeading ? ' story-heading' : '';
+        return `<div class="rule-item${extraClass}" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    let html = '';
+
+    chaptersData.forEach(ch => {
+        const vocabId = `secVocabCh${ch.number}`;
+        const defId = `secDefCh${ch.number}`;
+        const storyId = `secStoryCh${ch.number}`;
+
+        // Chapter divider
+        html += `<div class="chapter-divider"><h2>Chapter ${ch.number}</h2><p>${ch.title}</p></div>`;
+
+        // Vocabulary section
+        html += `<div class="section-block" id="${vocabId}">
+            <div class="sec-title">📚 Vocabulary — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(vocabId)}
+                <div class="info-box">
+                    <div class="info-title">Key Vocabulary</div>
+                    <div class="vocab">${makePills(ch.vocab, vocabId)}</div>
+                </div>
+            </div>
+        </div>`;
+
+        // Definitions section
+        html += `<div class="section-block" id="${defId}">
+            <div class="sec-title">📝 Definitions — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(defId)}
+                <div class="rules-grid">${ch.definitions.map((d, i) => {
+                    const speakText = cleanForSpeech(d.word) + " | " + d.def;
+                    return makeRuleItem('📖', defId, i, speakText, d.def, d.word);
+                }).join('')}</div>
+            </div>
+        </div>`;
+
+        // Full Story Section
+        const headings = ["Lessons in the Cell", "The Father He Never Had", "The Mystery of His Betrayal", "The Priest's Illness", "The Escape Plan", "Wisdom That Remains", "The Final Gift"];
+        html += `<div class="section-block" id="${storyId}">
+            <div class="sec-title">📖 Full Story Text & Translation — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(storyId)}
+                <div class="rules-grid">${ch.story.map((s, i) => {
+                    const isHeading = headings.includes(s.en);
+                    const icon = isHeading ? '📌' : '📜';
+                    return makeRuleItem(icon, storyId, i, s.en, s.ar, s.en, isHeading);
+                }).join('')}</div>
+            </div>
+        </div>`;
+    });
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 3 - Unit 6: Why Hanging Out Matters & Tell the World What You Saw (Lessons 4 & 5)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🤝</span><h1>Unit 6: Why Hanging Out Matters</h1><p class="sub">Sec 3 - Lessons 4 & 5 (Tell the World What You Saw)</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 3 - Unit 6 - Lessons 4 & 5) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["compromise (n)", "تسوية - حل وسط"],
+    ["destructive (adj)", "مدمر"],
+    ["entertainment (n)", "تسلية - ترفيه"],
+    ["harmful (adj)", "ضار"],
+    ["interaction (n)", "تفاعل"],
+    ["overwhelming (adj)", "جارف - مرهق"],
+    ["packed (adj)", "مكتظ"],
+    ["worth (adj)", "ذو قيمة / جدير بـ"]
+];
+
+// 2. Accumulative Vocabulary
+const accVocab = [
+    ["aspect (n)", "جانب - وجه"],
+    ["author (n)", "مؤلف"],
+    ["available (adj)", "متاح - متوافر"],
+    ["balanced (adj)", "متوازن"],
+    ["briefly (adv)", "باختصار"],
+    ["chemical (n-adj)", "مادة كيميائية - كيميائي"],
+    ["contrast(ed) (v-n)", "يقارن - تباين"],
+    ["crowded (adj)", "مزدحم"],
+    ["director (n)", "مخرج - مدير"],
+    ["disappointed (adj)", "خائب الأمل - محبط"],
+    ["disappointing (adj)", "مخيب للآمال"],
+    ["empathy (n)", "تعاطف"],
+    ["enjoyable (adj)", "مسل - ممتع"],
+    ["essential (adj)", "أساسي - جوهري"],
+    ["feature (n)", "سمة"],
+    ["greet(ed) (v)", "يحيي"],
+    ["highlight(ed) (v-n)", "يبرز - جزء بارز"],
+    ["impression (n)", "انطباع"],
+    ["inform (v)", "يخبر - يعلم"],
+    ["occasion (n)", "مناسبة"],
+    ["performance (n)", "أداء"],
+    ["plot (n)", "حكاية القصة"],
+    ["poor (adj)", "ضعيف الجودة"],
+    ["relationship (n)", "علاقة"],
+    ["relaxed (adj)", "مسترخي"],
+    ["specific (adj)", "محدد"],
+    ["terrific (adj)", "رائع جدا"],
+    ["throughout (prep)", "خلال - في كل أجزاء"]
+];
+
+// 3. Definitions
+const defsData = [
+    {word: "compromise (n)", def: "an agreement where each side gives up part of what they want"},
+    {word: "destructive (adj)", def: "causing great damage or harm"},
+    {word: "entertainment (n)", def: "activities that amuse or interest people"},
+    {word: "harmful (adj)", def: "causing damage, injury, or negative effects"},
+    {word: "interaction (n)", def: "communication or involvement between people"},
+    {word: "overwhelming (adj)", def: "something that is so strong that it is hard to deal with"},
+    {word: "packed (adj)", def: "very full; crowded"},
+    {word: "worth (adj)", def: "having value or importance; deserving something"}
+];
+
+// 4. Synonyms & Antonyms
+const synData = [
+    {word: "compromise(d) (v)", syn: "negotiate"},
+    {word: "destructive (adj)", syn: "damaging, ruinous"},
+    {word: "entertainment (n)", syn: "amusement, recreation, fun"},
+    {word: "harmful (adj)", syn: "damaging, dangerous"},
+    {word: "interaction (n)", syn: "communication, contact"},
+    {word: "overwhelming (adj)", syn: "intense, unbearable"},
+    {word: "packed (adj)", syn: "crowded, full, jammed, congested"},
+    {word: "worth (adj)", syn: "valuable, worthwhile, deserving"}
+];
+
+const antData = [
+    {word: "destructive (adj)", ant: "constructive, helpful, beneficial"},
+    {word: "entertainment (n)", ant: "boredom"},
+    {word: "harmful (adj)", ant: "harmless, safe, beneficial"},
+    {word: "interaction (n)", ant: "isolation, separation, withdrawal"},
+    {word: "overwhelming (adj)", ant: "manageable, light, mild"},
+    {word: "packed (adj)", ant: "empty, spacious, uncrowded, vacant"},
+    {word: "worth (adj)", ant: "worthless, useless, trivial"}
+];
+
+// 5. Collocations
+const collocationsData = [
+    ["develop empathy", "يطور التعاطف"],
+    ["form/make friendships", "يكون صداقات"],
+    ["give a recommendation", "يقدم توصية"],
+    ["handle/face challenges", "يواجه التحديات"],
+    ["maintain friendships", "يحافظ على الصداقات"],
+    ["make an effort", "يبذل جهداً"],
+    ["make plans", "يخطط"],
+    ["worth the effort", "يستحق الجهد"]
+];
+
+// 6. Expressions & Prepositions
+const exprData = [
+    ["main course (n)", "الوجبة الرئيسية"],
+    ["overall impression (n)", "الانطباع العام"],
+    ["pros and cons (n)", "المزايا والعيوب"],
+    ["stay in touch", "يبقى على تواصل"],
+    ["worth it", "يستحق العناء"]
+];
+
+// 7. Verb + Prepositions
+const phrasalVerbsData = [
+    ["apologize for", "يعتذر عن"],
+    ["apply for", "يتقدم بطلب"],
+    ["belong to", "ينتمي إلى"],
+    ["check on", "يتفقد"],
+    ["consist of", "يتكون من"],
+    ["end up (with / being)", "ينتهي به الأمر"]
+];
+
+// 8. Derivatives
+const derivativesData = [
+    {word: "compromise", forms: ["compromise (v)", "compromise (n)", "compromising (adj)"], ex: "They compromised to end the war. / The two sides reached a compromise. / They took a compromising position to end the war."},
+    {word: "destructive", forms: ["destructive (adj)", "destruction (n)", "destroy (v)"], ex: "The storm was destructive. / The storm caused destruction. / The storm destroyed the village."},
+    {word: "disappointing", forms: ["disappointing (adj)", "disappointment (n)", "disappoint (v)"], ex: "The results were disappointing. / The results were a big disappointment. / The results disappointed my teacher."},
+    {word: "entertainment", forms: ["entertainment (n)", "entertain (v)", "entertaining (adj)"], ex: "Watching the clown is a form of entertainment. / The clown entertained the children. / The clown was very entertaining."},
+    {word: "interaction", forms: ["interaction (n)", "interact (v)", "interactive (adj)"], ex: "Teacher-student interaction is important. / Students interact with each other in class. / The website has interactive lessons."},
+    {word: "overwhelming", forms: ["overwhelming (adj)", "overwhelm (v)", "overwhelmed (adj)"], ex: "The workload is overwhelming. / The strong wind overwhelmed the small boat. / He felt overwhelmed by the stress."},
+    {word: "packed", forms: ["packed (adj)", "pack (v)", "packing (n)"], ex: "Everything is packed in boxes. / The stadium was packed with fans. / I packed my clothes for the trip. / The packing of goods took hours."},
+    {word: "recommend", forms: ["recommend (v)", "recommendation (n)", "recommended (adj)"], ex: "He recommends this hotel. / He gave a recommendation for this hotel. / This hotel is recommended."}
+];
+
+// 9. Clear the Confusion
+const confusionData = [
+    {word: "packed - wrapped", forms: ["packed (adj)", "wrapped (adj)"], ex: "The stadium was packed with fans. / The gift was wrapped in red paper."},
+    {word: "recommend - suggest", forms: ["recommend (v)", "suggest (v)"], ex: "I recommend this restaurant for its fresh seafood. / She suggested going for a walk."},
+    {word: "destructive - instructive", forms: ["destructive (adj)", "instructive (adj)"], ex: "The storm was very destructive. / The lecture was very instructive."},
+    {word: "-ing adjectives - -ed adjectives", forms: ["-ing adjectives", "-ed adjectives"], ex: "The movie was interesting. (= The movie causes interest) / I was interested in the movie. (= I felt interest)"},
+    {word: "interaction - reaction", forms: ["interaction (n)", "reaction (n)"], ex: "Classroom interaction is important for learning. / His reaction to the news was surprising."},
+    {word: "overwhelming - amazing", forms: ["overwhelming (adj)", "amazing (adj)"], ex: "The amount of work was overwhelming. / The view from the mountain was amazing."}
+];
+
+// 10. Reading Text (Lesson 4)
+const readingTextL4 = [
+    {en: "Have you ever wondered why spending time with friends feels so good? Scientists have discovered that socializing isn't just fun – it's actually essential for our mental and physical well-being.", ar: "هل تساءلت يوماً لماذا قضاء الوقت مع الأصدقاء يشعرك بالسعادة؟ اكتشف العلماء أن التواصل الاجتماعي ليس مجرد متعة - بل هو في الواقع ضروري لصحتنا العقلية والجسدية."},
+    {en: "When we hang out with friends, our brains release chemicals that make us feel happy and relaxed. Regular social interaction helps reduce stress, boost our immune system, and even helps us live longer.", ar: "عندما نخرج مع الأصدقاء، تطلق أدمغتنا مواد كيميائية تجعلنا نشعر بالسعادة والاسترخاء. يساعد التفاعل الاجتماعي المنتظم في تقليل التوتر، وتعزيز جهاز المناعة لدينا، وحتى يساعدنا على العيش لفترة أطول."},
+    {en: "People who maintain strong friendships tend to be more confident and better at handling life challenges. But hanging out with friends offers more than just health benefits. It's also how we learn important social skills.", ar: "يميل الأشخاص الذين يحافظون على صداقات قوية إلى أن يكونوا أكثر ثقة وأفضل في التعامل مع تحديات الحياة. لكن الخروج مع الأصدقاء يقدم أكثر من مجرد فوائد صحية. إنها أيضاً الطريقة التي نتعلم بها المهارات الاجتماعية المهمة."},
+    {en: "When we chat with friends, we practice communication, learn to compromise, and develop empathy. These skills help us in school, at work, and in relationships throughout our lives.", ar: "عندما نتحدث مع الأصدقاء، نمارس التواصل، ونتعلم التسوية، ونطور التعاطف. تساعدنا هذه المهارات في المدرسة والعمل وفي العلاقات طوال حياتنا."},
+    {en: "However, making plans with friends isn't always easy in today's busy world. Many people struggle to find time in their packed schedules.", ar: "ومع ذلك، فإن وضع خطط مع الأصدقاء ليس بالأمر السهل دائماً في عالم اليوم المزدحم. يكافح الكثير من الناس لإيجاد وقت في جداولهم المزدحمة."},
+    {en: "Technology can be both beneficial and harmful – while it's easier to stay in touch through social media and texting, some people prefer online interaction to face-to-face meetings. Others find it overwhelming to choose from so many entertainment options available today.", ar: "يمكن أن تكون التكنولوجيا مفيدة وضارة في نفس الوقت - بينما يسهل البقاء على اتصال عبر وسائل التواصل الاجتماعي والرسائل النصية، يفضل بعض الناس التفاعل عبر الإنترنت على اللقاءات وجهاً لوجه. يجد آخرون صعوبة بالغة في الاختيار من بين العديد من خيارات الترفيه المتاحة اليوم."},
+    {en: "Another challenge is that as we get older, our friend groups often change. People move away, start new jobs, or develop different interests. This means we sometimes need to make an effort to maintain old friendships while also being open to forming new ones.", ar: "التحدي الآخر هو أنه مع تقدمنا في السن، غالباً ما تتغير مجموعات أصدقائنا. ينتقل الناس بعيداً، أو يبدأون وظائف جديدة، أو يطورون اهتمامات مختلفة. هذا يعني أننا نحتاج أحياناً إلى بذل جهد للحفاظ على الصداقات القديمة مع الانفتاح أيضاً على تكوين صداقات جديدة."},
+    {en: "Despite these challenges, the effort to hang out with friends is always worth it. Whether you're having coffee, going to a movie, or just talking on a park bench, these moments of connection are what make life meaningful.", ar: "على الرغم من هذه التحديات، فإن الجهد المبذول للخروج مع الأصدقاء يستحق العناء دائماً. سواء كنت تتناول القهوة، أو تذهب إلى فيلم، أو تتحدث فقط على مقعد في الحديقة، فإن لحظات التواصل هذه هي ما يجعل الحياة ذات معنى."},
+    {en: "So next time a friend suggests hanging out, remember – you're not just having fun, you're investing in your health and happiness.", ar: "لذا في المرة القادمة التي يقترح فيها صديق الخروج، تذكر - أنت لا تستمتع فقط، بل تستثمر في صحتك وسعادتك."}
+];
+
+// 11. Reading Text (Lesson 5)
+const readingTextL5 = [
+    {en: "Last weekend, I visited The Olive Tree, an Italian restaurant in Giza. While the food was excellent, the service was disappointing.", ar: "في نهاية الأسبوع الماضي، زرت مطعم 'The Olive Tree'، وهو مطعم إيطالي في الجيزة. بينما كان الطعام ممتازاً، كانت الخدمة مخيبة للآمال."},
+    {en: "When we arrived, the waiter took a long time to greet us. After we ordered, it took over 30 minutes to get our drinks. However, when the food arrived, it was hot and delicious.", ar: "عندما وصلنا، استغرق النادل وقتاً طويلاً لتحيتنا. بعد أن طلبنا، استغرق الأمر أكثر من 30 دقيقة للحصول على مشروباتنا. ومع ذلك، عندما وصل الطعام، كان ساخناً ولذيذاً."},
+    {en: "The waiter was polite but seemed very busy and didn't check on us during the meal. Overall, I enjoyed the food, but I expected better service for the price.", ar: "كان النادل مهذباً لكنه بدا مشغولاً جداً ولم يتفقدنا أثناء الوجبة. بشكل عام، استمتعت بالطعام، لكنني توقعت خدمة أفضل مقابل السعر."},
+    {en: "I wouldn't recommend this restaurant for a special occasion, but it might be okay for a quick dinner if you're not in a hurry.", ar: "لا أنصح بهذا المطعم لمناسبة خاصة، لكنه قد يكون مناسباً لعشاء سريع إذا لم تكن في عجلة من أمرك."}
+];
+
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (typeof keyVocab !== 'undefined' && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary (Lessons 4 & 5)</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Accumulative Vocabulary
+    if (typeof accVocab !== 'undefined' && accVocab.length > 0) {
+        sections.push({ title:"📚 Accumulative Vocabulary", id:"secAccVocab", content: `<div class="info-box"><div class="info-title">Accumulative Vocabulary</div><div class="vocab">${makePills(accVocab, "secAccVocab")}</div></div>` });
+    }
+
+    // 3. Definitions
+    if (typeof defsData !== 'undefined' && defsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${defsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    // 4. Synonyms & Antonyms
+    if (typeof synData !== 'undefined' && synData.length > 0) {
+        sections.push({ title:"🔄 Synonyms", id:"secSyn", content: `<div class="rules-grid">${synData.map((s,i) => makeRuleItem('↔️', 'secSyn', i, s.word + " | " + s.syn, s.syn, s.word)).join('')}</div>` });
+    }
+    if (typeof antData !== 'undefined' && antData.length > 0) {
+        sections.push({ title:"🚫 Antonyms", id:"secAnt", content: `<div class="rules-grid">${antData.map((a,i) => makeRuleItem('🛑', 'secAnt', i, a.word + " | " + a.ant, a.ant, a.word)).join('')}</div>` });
+    }
+
+    // 5. Collocations
+    if (typeof collocationsData !== 'undefined' && collocationsData.length > 0) {
+        sections.push({ title:"🔗 Collocations", id:"secCollocations", content: `<div class="rules-grid">${collocationsData.map((c,i) => makeRuleItem('🔗', 'secCollocations', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 6. Expressions & Prepositions
+    if (typeof exprData !== 'undefined' && exprData.length > 0) {
+        sections.push({ title:"💬 Expressions & Prepositions", id:"secExpr", content: `<div class="rules-grid">${exprData.map((e,i) => makeRuleItem('💡', 'secExpr', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 7. Verb + Prepositions
+    if (typeof phrasalVerbsData !== 'undefined' && phrasalVerbsData.length > 0) {
+        sections.push({ title:"⚡ Verb + Prepositions", id:"secPhrasal", content: `<div class="rules-grid">${phrasalVerbsData.map((p,i) => makeRuleItem('⚡', 'secPhrasal', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 8. Derivatives
+    if (typeof derivativesData !== 'undefined' && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 9. Clear the Confusion
+    if (typeof confusionData !== 'undefined' && confusionData.length > 0) {
+        sections.push({ title:"🧐 Clear the Confusion", id:"secConfusion", content: `<div class="rules-grid">${confusionData.map((c,i) => {
+            const speakText = `${c.word} | ${c.forms}`;
+            const displayText = `${c.word} : ${c.forms}`;
+            return makeRuleItem('🧐', 'secConfusion', i, speakText, c.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 10. Reading Text (Lesson 4)
+    if (typeof readingTextL4 !== 'undefined' && readingTextL4.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 4)", id:"secReadL4", content: makeStorySection("Why Hanging Out Matters", readingTextL4) });
+    }
+
+    // 11. Reading Text (Lesson 5)
+    if (typeof readingTextL5 !== 'undefined' && readingTextL5.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 5)", id:"secReadL5", content: makeStorySection("The Olive Tree - Great Food, Poor Service", readingTextL5) });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

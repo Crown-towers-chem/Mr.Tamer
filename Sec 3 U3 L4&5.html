@@ -1,0 +1,652 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 3 - Unit 3: Global Climate & How to Help (Lessons 4 & 5)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🌍</span><h1>Unit 3: Global Climate & How to Help</h1><p class="sub">Sec 3 - Lessons 4 & 5</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 3 - Unit 3 - Lessons 4 & 5) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["accompany(ied) (v)", "يرافق - يصطحب"],
+    ["amphibious (adj)", "برمائي"],
+    ["climate migration (n)", "هجرة مناخية"],
+    ["expansion (n)", "توسع / توسع"],
+    ["exposed (adj)", "معرض للخطر"],
+    ["indicate(d) (v)", "يوحي / يشير إلى"],
+    ["intensify(ied) (v)", "يشتد"],
+    ["large-scale (adj)", "على نطاق واسع"],
+    ["megacity (n)", "مدينة عملاقة"],
+    ["migration (n)", "هجرة"],
+    ["mitigate(d) (v)", "يخفف"],
+    ["phenomenon (n)", "ظاهرة"],
+    ["potential (adj)", "محتمل"],
+    ["potential (n)", "احتمال / إمكانية"]
+];
+
+// 2. Accumulative Vocabulary
+const accVocab = [
+    ["adaptation (n)", "تكيف"],
+    ["address(ed) (v)", "يعالج / يتناول"],
+    ["advocate(d) (v)", "يدافع عن / يطالب بـ"],
+    ["appeal (ed) (n-v)", "جاذبية / نداء / يلجأ لـ"],
+    ["approximately (adv)", "تقريباً"],
+    ["average (n)", "معدل - متوسط"],
+    ["characteristic (n)", "صفة - سمة"],
+    ["coastal (adj)", "ساحلي"],
+    ["combined (adj)", "متحدة / مدمج"],
+    ["commitment (n)", "التزام"],
+    ["contributor (n)", "مساهم"],
+    ["convince(d) (v)", "يقنع"],
+    ["critical (adj)", "حرج / نقدي"],
+    ["defense system (n)", "نظام دفاعي"],
+    ["demonstrate(d) (v)", "يبرز / يظهر"],
+    ["dominant (adj)", "سائد"],
+    ["effort (n)", "جهد"],
+    ["estimated (adj)", "مقدر / تقديري"],
+    ["frequency (n)", "تكرار"],
+    ["gain(ed) (v)", "يكتسب / يزداد"],
+    ["glacier (n)", "نهر جليدي"],
+    ["greenhouse (n)", "دفيئة / صوبة"],
+    ["hopeless (adj)", "ميؤوس منه"],
+    ["implement(ed) (v)", "يطبق / ينفذ"],
+    ["implication (n)", "دلالة / نتيجة"],
+    ["innovative (adj)", "مبتكر"],
+    ["insistent (adj)", "مصمم"],
+    ["instance (n)", "مثال / حالة"],
+    ["low-lying (adj)", "منخفض"],
+    ["matter(ed) (v)", "يهم"],
+    ["meaningful (adj)", "معبر / ذو مغزى"],
+    ["mechanism (n)", "آلية"],
+    ["melt(ed) (v)", "يذوب"],
+    ["minor (adj)", "ثانوي / غير مهم"],
+    ["modification (n)", "تعديل"],
+    ["numerous (adj)", "كثير"],
+    ["overnight (adv)", "خلال الليل"],
+    ["persistent (adj)", "مثابر"],
+    ["persuade(d) (v)", "يقنع"],
+    ["persuasion (n)", "إقناع"],
+    ["persuasive (adj)", "مقنع"],
+    ["poverty (n)", "الفقر"],
+    ["powerless (adj)", "عاجز"],
+    ["pressing (adj)", "ملح"],
+    ["projection (n)", "توقع"],
+    ["recognize(d) (v)", "يدرك / يعترف"],
+    ["reverse(d) (v)", "يعكس / يلغى"],
+    ["river (n)", "نهر"],
+    ["shift (n)", "تحول / دوام"],
+    ["significant (adj)", "كبير / مهم"],
+    ["strategy (n)", "استراتيجية"],
+    ["thermal (adj)", "حراري"],
+    ["trend (n)", "توجه / رواج"],
+    ["zone (n)", "منطقة"]
+];
+
+// 3. Definitions
+const defsData = [
+    {word: "accompany(ied) (v)", def: "to go somewhere with someone or something as a companion or support"},
+    {word: "amphibious (adj)", def: "able to live or operate both on land and in water"},
+    {word: "climate migration (n)", def: "the movement of people from one place to another because of changes in climate or extreme weather conditions"},
+    {word: "expansion (n)", def: "the act of increasing in size, amount, or importance; the process of becoming larger"},
+    {word: "exposed (adj)", def: "not protected from the weather or from harm; open to danger or risk"},
+    {word: "indicate(d) (v)", def: "to show, point out, or make something clear or known"},
+    {word: "intensify(ied) (v)", def: "to become or make something stronger, greater, or more serious"},
+    {word: "large-scale (adj)", def: "involving many people or things; happening over a wide area or at a great size"},
+    {word: "megacity (n)", def: "a very large city with a population of over ten million people"},
+    {word: "migration (n)", def: "the movement of people or animals from one region to another, often for work or better living conditions"},
+    {word: "mitigate(d) (v)", def: "to make something less bad, serious, or harmful"},
+    {word: "phenomenon (n)", def: "an event or fact that can be seen or observed, especially one that is unusual or remarkable"},
+    {word: "potential (adj)", def: "having the ability or capacity to develop into something in the future; possible or likely to happen"}
+];
+
+// 4. Synonyms & Antonyms
+const synData = [
+    {word: "accompanied (adj)", syn: "followed, associated"},
+    {word: "exposed (adj)", syn: "vulnerable, unprotected"},
+    {word: "implement (v)", syn: "execute, carry out, apply, enforce"},
+    {word: "implication (n)", syn: "meaning, inference, indication, hint"},
+    {word: "intensify (v)", syn: "strengthen, increase, escalate"},
+    {word: "large-scale (adj)", syn: "extensive, wide-ranging, broad"},
+    {word: "expansion (n)", syn: "growth, increase, enlargement"},
+    {word: "indicate (d) (v)", syn: "show, point out, signal"},
+    {word: "mitigate (d) (v)", syn: "reduce, lessen, ease"},
+    {word: "potential (adj)", syn: "possible, likely, prospective, expected"}
+];
+
+const antData = [
+    {word: "accompanied (adj)", ant: "alone, lonely, unaccompanied, solo"},
+    {word: "exposed (adj)", ant: "protected, safe, sheltered"},
+    {word: "implement (v)", ant: "ignore, abandon, neglect, cancel"},
+    {word: "intensify (v)", ant: "weaken, reduce, decrease, ease"},
+    {word: "large-scale (adj)", ant: "small-scale, minor, limited"},
+    {word: "expansion (n)", ant: "reduction, contraction"},
+    {word: "indicate(d) (v)", ant: "hide, obscure, deny"},
+    {word: "mitigate(d) (v)", ant: "worsen, intensify, aggravate"},
+    {word: "potential (adj)", ant: "actual, real, certain, definite"}
+];
+
+// 5. Collocations
+const collocationsData = [
+    ["make a difference", "يحدث فرقاً"],
+    ["make/take steps", "يأخذ خطوات"]
+];
+
+// 6. Expressions & Prepositions
+const exprData = [
+    ["call to action", "دعوة إلى التفاعل/المشاركة"],
+    ["compared to/with", "مقارنة بـ"],
+    ["ice sheet", "طبقة جليدية"],
+    ["mid-20th-century", "منتصف القرن العشرين"],
+    ["point of view", "وجهة نظر"],
+    ["slow its progression", "يبطئ تقدمه"],
+    ["come from", "يأتي من"],
+    ["result from", "ينتج عن"],
+    ["result in", "يؤدي إلى"]
+];
+
+// 7. Verb + Prepositions (Integrated in section above, split for code clarity)
+const phrasalVerbsData = [
+    ["come from", "يأتي من"],
+    ["result from", "ينتج عن"],
+    ["result in", "يؤدي إلى"]
+];
+
+// 8. Derivatives
+const derivativesData = [
+    {word: "accompany", forms: ["accompaniment (n)", "accompanied (adj)", "accompany (v)"], ex: "The floods came with heavy rainfall as an accompaniment. / The storm was accompanied by strong winds. / Rising temperatures often accompany droughts."},
+    {word: "expansion", forms: ["expand (v)", "expansion (n)", "expansive (adj)"], ex: "Seawater will expand as temperatures rise. / The expansion of urban areas increases risks. / The ocean has an expansive surface."},
+    {word: "indicate", forms: ["indicate (v)", "indication (n)", "indicative (adj)"], ex: "Reports indicate an increase in flooding. / There is no clear indication of danger. / This is indicative of poor planning."},
+    {word: "migrate", forms: ["migrate (v)", "migration (n)", "migratory (adj)"], ex: "Birds migrate in search of food. / Climate change affects human migration. / Migratory species need safe habitats."},
+    {word: "phenomenon", forms: ["phenomenon (n)", "phenomena (n, plural)"], ex: "Flooding is a natural phenomenon. / Extreme weather events are common phenomena."}
+];
+
+// 9. Clear the Confusion
+const confusionData = [
+    {word: "announcement - advertisement", forms: ["announcement (n)", "advertisement (n)"], ex: "The PM made an announcement that next Thursday is a holiday. / I saw an advertisement for the new phone."},
+    {word: "increase + by, to, in", forms: ["increase by", "increase to", "increase in"], ex: "Sales increased by 10% last year. / The price increased to 50 pounds. / There was an increase in numbers and quantity sales."},
+    {word: "migration - displacement", forms: ["migration (n)", "displacement (n)"], ex: "Birds begin migration in autumn. / The war caused displacement of thousands of people."},
+    {word: "phenomenon - phenomena", forms: ["phenomenon (n)", "phenomena (n, plural)"], ex: "A rainbow is a beautiful phenomenon. / Natural phenomena can be unpredictable."},
+    {word: "rather than - other than", forms: ["rather than (prep/conj)", "other than (prep)"], ex: "He chose water rather than juice. / I don't watch TV other than football matches."}
+];
+
+// 10. Reading Text (Lesson 4)
+const readingTextL4 = [
+    {en: "Scientific data indicate that global sea level in 2016 was approximately 82 mm higher than the 1983 average. Projections suggest a potential rise of 0.2 to 2 meters by 2100.", ar: "تشير البيانات العلمية إلى أن مستوى سطح البحر العالمي في عام 2016 كان أعلى بحوالي 82 ملم من متوسط عام 1983. وتشير التوقعات إلى ارتفاع محتمل يتراوح من 0.2 إلى 2 متر بحلول عام 2100."},
+    {en: "This trend is accompanied by a documented increase in the frequency of coastal flooding in numerous regions, compared to mid-20th-century levels.", ar: "يصاحب هذا الاتجاه زيادة موثقة في وتيرة الفيضانات الساحلية في العديد من المناطق، مقارنة بمستويات منتصف القرن العشرين."},
+    {en: "The phenomenon is primarily driven by two connected mechanisms: (1) The accelerated melting of glaciers and ice sheets due to rising global temperatures, which has become the dominant contributor to sea level rise over the past decade.", ar: "تحدث هذه الظاهرة في المقام الأول بفعل آليتين مترابطتين: (1) الذوبان المتسارع للأنهار الجليدية والصفائح الجليدية بسبب ارتفاع درجات الحرارة العالمية، والذي أصبح المساهم المهيمن في ارتفاع مستوى سطح البحر على مدى العقد الماضي."},
+    {en: "(2) Thermal expansion of seawater as ocean temperatures increase. These processes are expected to intensify under current climate change scenarios.", ar: "(2) التمدد الحراري لمياه البحر مع ارتفاع درجات حرارة المحيطات. من المتوقع أن تشتد هذه العمليات في ظل سيناريوهات تغير المناخ الحالية."},
+    {en: "The implications are severe, with an estimated 275 million people currently residing in low-lying coastal zones exposed to floods.", ar: "الآثار وخيمة، حيث يقدر عدد الأشخاص الذين يقيمون حالياً في المناطق الساحلية المنخفضة والمعرضة للفيضانات بحوالي 275 مليون شخص."},
+    {en: "Notably, the majority of the world's megacities are situated in coastal areas, including several major European urban centers facing significant flood risks.", ar: "ومن الجدير بالذكر أن غالبية المدن العملاقة في العالم تقع في مناطق ساحلية، بما في ذلك العديد من المراكز الحضرية الأوروبية الكبرى التي تواجه مخاطر فيضانات كبيرة."},
+    {en: "Climate migration and large-scale population shifts are expected in the coming decades. While international climate agreements aim to mitigate greenhouse gas emissions, their potential to slow sea level rise remains uncertain.", ar: "من المتوقع حدوث هجرة مناخية وتحولات سكانية واسعة النطاق في العقود القادمة. وبينما تهدف الاتفاقيات المناخية الدولية إلى تخفيف انبعاثات غازات الدفيئة، تظل قدرتها المحتملة على إبطاء ارتفاع مستوى سطح البحر غير مؤكدة."},
+    {en: "Consequently, adaptation strategies are becoming increasingly critical. Innovative engineering solutions, such as amphibious architecture and large-scale coastal defense systems, are being implemented in flood-prone regions.", ar: "وبالتالي، أصبحت استراتيجيات التكيف ذات أهمية متزايدة. يتم تنفيذ حلول هندسية مبتكرة، مثل الهندسة المعمارية البرمائية وأنظمة الدفاع الساحلية واسعة النطاق، في المناطق المعرضة للفيضانات."},
+    {en: "These measures demonstrate the growing recognition that both modification and adaptation will be essential to address this pressing global challenge.", ar: "توضح هذه التدابير الاعتراف المتزايد بأن كلاً من التعديل والتكيف سيكونان ضروريين لمعالجة هذا التحدي العالمي الملح."}
+];
+
+// 11. Reading Text (Lesson 5)
+const readingTextL5 = [
+    {en: "When we hear about worldwide issues like climate change, poverty, or hunger, it might seem impossible for one person to make a difference.", ar: "عندما نسمع عن قضايا عالمية مثل تغير المناخ أو الفقر أو الجوع، قد يبدو من المستحيل لشخص واحد أن يحدث فرقاً."},
+    {en: "However, these problems can't be ignored—they must require collective action. If everyone takes small but meaningful steps, the combined impact could be huge.", ar: "ومع ذلك، لا يمكن تجاهل هذه المشكلات - يجب أن تتطلب عملاً جماعياً. إذا اتخذ الجميع خطوات صغيرة ولكنها ذات معنى، فقد يكون التأثير المشترك هائلاً."},
+    {en: "We should use the knowledge we gain to reflect on our global responsibilities. For instance, reducing waste, supporting ethical businesses, or advocating for fair policies may seem minor, but together, they must create significant change.", ar: "يجب علينا استخدام المعرفة التي نكتسبها للتفكير في مسؤولياتنا العالمية. على سبيل المثال، قد يبدو تقليل النفايات، أو دعم الشركات الأخلاقية، أو الدعوة إلى سياسات عادلة أموراً بسيطة، لكنها معاً تخلق تغييراً كبيراً."},
+    {en: "The belief that individual actions don't matter couldn't be further from the truth—history shows that social shifts often begin with small, insistent efforts.", ar: "الاعتقاد بأن الأفعال الفردية لا تهم لا يمكن أن يكون أبعد من الحقيقة - التاريخ يظهر أن التحولات الاجتماعية غالباً ما تبدأ بجهود صغيرة ومستمرة."},
+    {en: "Environmental ruin can't be reversed overnight, but sustainable choices might slow its progression. Rather than feeling powerless, we should recognize that every positive action contributes to a larger solution.", ar: "لا يمكن عكس الدمار البيئي بين عشية وضحاها، لكن الخيارات المستدامة قد تبطئ تقدمه. بدلاً من الشعور بالعجز، يجب أن ندرك أن كل إجراء إيجابي يساهم في حل أكبر."},
+    {en: "The world's problems must be addressed collectively—and that starts with individual commitment. Change may not happen immediately, but persistence could lead to a fairer, healthier planet for all.", ar: "يجب معالجة مشاكل العالم بشكل جماعي - وهذا يبدأ بالالتزام الفردي. قد لا يحدث التغيير على الفور، لكن المثابرة قد تؤدي إلى كوكب أكثر عدلاً وصحة للجميع."}
+];
+
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (keyVocab && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary (Lessons 4 & 5)</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Accumulative Vocabulary
+    if (accVocab && accVocab.length > 0) {
+        sections.push({ title:"📚 Accumulative Vocabulary", id:"secAccVocab", content: `<div class="info-box"><div class="info-title">Accumulative Vocabulary</div><div class="vocab">${makePills(accVocab, "secAccVocab")}</div></div>` });
+    }
+
+    // 3. Definitions
+    if (defsData && defsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${defsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    // 4. Synonyms & Antonyms
+    if (synData && synData.length > 0) {
+        sections.push({ title:"🔄 Synonyms", id:"secSyn", content: `<div class="rules-grid">${synData.map((s,i) => makeRuleItem('↔️', 'secSyn', i, s.word + " | " + s.syn, s.syn, s.word)).join('')}</div>` });
+    }
+    if (antData && antData.length > 0) {
+        sections.push({ title:"🚫 Antonyms", id:"secAnt", content: `<div class="rules-grid">${antData.map((a,i) => makeRuleItem('🛑', 'secAnt', i, a.word + " | " + a.ant, a.ant, a.word)).join('')}</div>` });
+    }
+
+    // 5. Collocations
+    if (collocationsData && collocationsData.length > 0) {
+        sections.push({ title:"🔗 Collocations", id:"secCollocations", content: `<div class="rules-grid">${collocationsData.map((c,i) => makeRuleItem('🔗', 'secCollocations', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 6. Expressions & Prepositions
+    if (exprData && exprData.length > 0) {
+        sections.push({ title:"💬 Expressions & Prepositions", id:"secExpr", content: `<div class="rules-grid">${exprData.map((e,i) => makeRuleItem('💡', 'secExpr', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 7. Verb + Prepositions
+    if (phrasalVerbsData && phrasalVerbsData.length > 0) {
+        sections.push({ title:"⚡ Verb + Prepositions", id:"secPhrasal", content: `<div class="rules-grid">${phrasalVerbsData.map((p,i) => makeRuleItem('⚡', 'secPhrasal', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 8. Derivatives
+    if (derivativesData && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 9. Clear the Confusion
+    if (confusionData && confusionData.length > 0) {
+        sections.push({ title:"🧐 Clear the Confusion", id:"secConfusion", content: `<div class="rules-grid">${confusionData.map((c,i) => {
+            const speakText = `${c.word} | ${c.forms}`;
+            const displayText = `${c.word} : ${c.forms}`;
+            return makeRuleItem('🧐', 'secConfusion', i, speakText, c.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 10. Reading Text (Lesson 4)
+    if (readingTextL4 && readingTextL4.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 4)", id:"secReadL4", content: makeStorySection("Global Climate", readingTextL4) });
+    }
+
+    // 11. Reading Text (Lesson 5)
+    if (readingTextL5 && readingTextL5.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 5)", id:"secReadL5", content: makeStorySection("How to Help Our Environment", readingTextL5) });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

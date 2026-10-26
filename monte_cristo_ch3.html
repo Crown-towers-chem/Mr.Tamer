@@ -1,0 +1,497 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Vocab Master - The Count of Monte Cristo (Chapter 3)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #004d40; --A2: #00695c; --blue4: #b2dfdb; --blue5: #f0f7f6;
+            --text: #1E293B; --text2: #546e7a; --card: #ffffff; --border: #cfd8dc;
+            --bg: #f3f4f7; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(0, 77, 64, 0.08);
+            --word-highlight: #ffc107;
+            --fab-bg: #263238; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.5rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:900px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);max-width:200px;}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:900px;margin:auto;padding:0 16px;}
+
+        .chapter-divider{text-align:center;margin:34px auto 18px;padding:14px 30px;background:linear-gradient(135deg,var(--A),var(--A2));border-radius:12px;max-width:640px;box-shadow:0 6px 16px rgba(0,0,0,.12);}
+        .chapter-divider h2{margin:0;font-size:22px;color:#fff;font-weight:900;letter-spacing:1px;}
+        .chapter-divider p{margin:4px 0 0;font-size:15px;color:#fff;opacity:.9;font-weight:700;}
+
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:100px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .story-card .story-heading{font-weight:900;color:var(--A);margin-bottom:12px;font-size:15px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:16px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence{background:rgba(255,255,255,0.05);}
+        .sentence.sub-heading{font-weight:900;color:var(--A2);font-size:15px;text-transform:uppercase;letter-spacing:.5px;background:var(--blue4);}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .sentence.active-sent, .pill.active-sent, .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .word.highlight, .rule-item .word.highlight, .pill .word.highlight{background:var(--word-highlight);}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🏰</span><h1>Vocab Master</h1><p class="sub">The Count of Monte Cristo - Chapter 3: Betrayal and Arrest (The Château d'If)</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' ');
+    result = result.replace(/[→]/g, ' ');
+    result = result.replace(/\s+/g, ' ').trim();
+    return result;
+}
+
+// ===================== بيانات المحتوى (The Count of Monte Cristo - Chapters 1-6) =====================
+
+const chaptersData = [
+{
+    number: 3,
+    title: "Betrayal and Arrest (The Château d'If)",
+    vocab: [
+        ["abandon (v)", "يتخلى عن"], ["accuse (d) (v)", "يتهم / يشكو"], ["appetite (n)", "شهية / رغبة"],
+        ["bared (adj)", "مكشوف"], ["beg (v)", "يتسول"], ["betrayal (n)", "خيانة"],
+        ["charity (n)", "صدقة"], ["confess (v)", "يعترف"], ["condemn (v)", "يدين"],
+        ["contempt (n)", "احتقار"], ["criminals (n)", "مجرمون"], ["courage (n)", "شجاعة"],
+        ["damp (adj)", "رطب"], ["dawn (n)", "فجر"], ["deceit (n)", "خداع"],
+        ["denunciation (n)", "إدانة"], ["despair (n)", "يأس"], ["disbelief (n)", "عدم تصديق"],
+        ["dread (n)", "خوف / فزع"], ["drain (ed) (v)", "يستنزف"], ["etched (v)", "منقوش / محفور في الذاكرة"],
+        ["evidence (n)", "دليل / إثبات"], ["faint (adj)", "ضعيف"], ["faith (n)", "إيمان / ثقة"],
+        ["his heart froze", "جمد قلبه من الصدمة"], ["treacherous (adj)", "خائن"], ["gaze (d) (v)", "يُحدق"],
+        ["grief (n)", "حزن / أسى"], ["innocence (n)", "براءة"], ["jealous (adj)", "غيور"],
+        ["jealousy (n)", "غيرة"], ["jailer (n)", "سجان"], ["justice (n)", "عدالة"],
+        ["loyalty (n)", "ولاء"], ["miserable (adj)", "بائس / تعيس"], ["nightmare (n)", "كابوس"],
+        ["obsessed (adj)", "مهووس / مسكون بهواجس"], ["pierce (d) (v)", "يخترق"], ["plot (ted) (v)", "يتآمر"],
+        ["prosecutor (n)", "مدعي عام"], ["prisoner (n)", "سجين"], ["punishment (n)", "عقاب"],
+        ["remain (ed) (v)", "يبقى / يظل"], ["remorse (n)", "تأنيب ضمير"], ["scratching (n)", "خدش"],
+        ["seize (d) (v)", "يمسك بقوة"], ["shrug (ged) (v)", "يهز كتفيه"], ["take root (v)", "يتجذر"],
+        ["terror (n)", "رعب"], ["proof (n)", "دليل / إثبات"], ["twisted into", "تحول إلى"],
+        ["throne (n)", "عرش"], ["interrogation (n)", "استجواب"], ["declare executor", "يُعين وصي"],
+        ["torn between", "موزع بين"], ["collapse (d) (v)", "ينهار"], ["rob (bed) (v)", "يسرق"],
+        ["tutor (n)", "مدرس خصوصي"], ["vigilance (n)", "يقظة / انتباه"], ["tavern (n)", "حانة"],
+        ["pledge (d) (adj)", "وعد / تعهد"], ["desperate (adj)", "يائس"], ["guilt (n)", "ذنب"],
+        ["traitor (n)", "خائن"], ["plead (ed) (v)", "يتوسل"], ["deaf ears", "آذان صماء"],
+        ["lose weight against", "فقد وزنه بسبب"], ["removed from command", "أزيل من منصبه"], ["waste your youth", "تضيع شبابك"],
+        ["rot (v)", "يتعفن"], ["you(r)self (adj)", "أنت (نفسك)"],
+        ["rage against", "يغضب ضد"], ["his frail body gave out", "جسده الواهن استسلم"], ["torture (n)", "تعذيب"],
+        ["constantly (adv)", "باستمرار"]
+    ],
+    definitions: [
+        {word: "treason", def: "the crime of betraying one's country"},
+        {word: "conspiracy", def: "a secret plan to do something unlawful or harmful"},
+        {word: "denunciation", def: "a public condemnation of someone or something; the act of informing"},
+        {word: "innocence", def: "the state of being not guilty of a crime or offense"},
+        {word: "vigilance", def: "the action or state of keeping careful watch for possible danger or difficulties"},
+        {word: "accusation", def: "the act of saying someone did something wrong"},
+        {word: "evidence", def: "information that proves something is true"},
+        {word: "interrogation", def: "the act of taking someone by the force"},
+        {word: "deceit", def: "the act of tricking or lying to others"},
+        {word: "sarcasm", def: "feeling that someone may be guilty"},
+        {word: "betray", def: "to break trust by being disloyal"}
+    ],
+    story: [
+        {en: "The night of Edmond Dantès's arrest remained etched in the memory of all who had gathered to celebrate his betrothal. The music had stopped, the laughter had died, and soldiers had led him away as though he were a criminal. The faces of his father and Mercédès, full of terror and disbelief, haunted him as he sat alone in his cold prison cell.", ar: "ظلت ليلة اعتقال إدموند دانتيس محفورة في ذاكرة كل من اجتمع للاحتفال بخطوبته. توقفت الموسيقى، ومات الضحك، وقاده الجنود بعيداً كما لو كان مجرماً. كانت وجوه والده ومرسيدس، المليئة بالرعب وعدم التصديق، تطارده بينما كان يجلس وحيداً في زنزانته الباردة."},
+        {en: "Shadows of Conspiracy", ar: "ظلال المؤامرة"},
+        {en: "Long before the soldiers had arrived, betrayal had already taken root. Danglars, the purser of the Pharaon, and the jealous fisherman who desired Mercédès, had finished their treacherous letter of denunciation. Together they accused Edmond of being a traitor, secretly plotting against the country. They had written with clever words, just enough truth to make the lie seem real. Edmond had indeed received a letter on the island of Elba, and he had promised his dying captain to deliver it. That innocent act of loyalty became twisted into proof of treason. When the soldiers entered the feast, Edmond had no idea of the invisible web already closing around him.", ar: "قبل وقت طويل من وصول الجنود، كانت الخيانة قد ترسخت بالفعل. دانغلار، أمين صندوق الفرعون، والصياد الغيور الذي رغب في مرسيدس، أنهيا رسالة الإدانة الخائنة. اتهموا معاً إدموند بأنه خائن، يتآمر سراً ضد البلاد. لقد كتبوا بكلمات ذكية، بقدر كافٍ من الحقيقة لجعل الكذبة تبدو حقيقية. لقد تلقى إدموند بالفعل رسالة في جزيرة إلبا، ووعد قبطانها المحتضر بتسليمها. تحول هذا الفعل البريء من الولاء إلى دليل على الخيانة. عندما دخل الجنود العيد، لم يكن لدى إدموند أي فكرة عن الشبكة غير المرئية التي كانت تطوقه بالفعل."},
+        {en: "The Interrogation", ar: "الاستجواب"},
+        {en: "In the office of Gérard de Villefort, deputy prosecutor of Marseille, Edmond tried to explain himself. His voice was steady at first, confident in his innocence. 'I am loyal to the king,' he said. 'I have never spoken with enemies. I am a sailor, monsieur, nothing more. I only carried out the final wish of my captain.'", ar: "في مكتب جيرارد دو فيلفور، نائب المدعي العام في مرسيليا، حاول إدموند شرح نفسه. كان صوته ثابتاً في البداية، واثقاً من براءته. 'أنا مخلص للملك،' قال. 'لم أتحدث أبداً مع الأعداء. أنا بحار يا سيدي، لا أكثر. لقد نفذت فقط الرغبة الأخيرة لقبطان سفينتي.'"},
+        {en: "Villefort, however, was torn between duty and ambition. In his hand lay the very letter that condemned not only Edmond but also Villefort's own father. If the letter were revealed, his career would collapse, his future destroyed. 'You admit to carrying this letter?' Villefort pressed. 'Yes,' Edmond answered honestly, 'but I did not know what it contained. I swear it, monsieur.'", ar: "ومع ذلك، كان فيلفور ممزقاً بين الواجب والطموح. في يده كانت الرسالة ذاتها التي أدانت ليس فقط إدموند بل أيضاً والد فيلفور نفسه. إذا تم الكشف عن الرسالة، ستنهار مسيرته المهنية، وسيُدمر مستقبله. 'أنت تعترف بحمل هذه الرسالة؟' ضغط فيلفور. 'نعم،' أجاب إدموند بصدق، 'لكني لم أعرف ما تحتويه. أقسم لك يا سيدي.'"},
+        {en: "Villefort burned the letter in secret, protecting himself, but condemned Edmond aloud. 'By your own confession, you carried a message from the enemy of the king. That is treason.' Edmond's heart froze. 'But I am innocent!' he cried. 'Perhaps,' Villefort replied coldly. 'But the law does not ask for innocence. It asks for proof. And the proof condemns you.'", ar: "أحرق فيلفور الرسالة سراً، لحماية نفسه، لكنه أدان إدموند بصوت عالٍ. 'باعترافك الخاص، لقد حملت رسالة من عدو الملك. هذه خيانة.' تجمد قلب إدموند. 'لكني بريء!' صرخ. 'ربما،' رد فيلفور ببرود. 'لكن القانون لا يطلب البراءة. إنه يطلب الدليل. والدليل يدينك.'"},
+        {en: "The Arrest Confirmed", ar: "تأكيد الاعتقال"},
+        {en: "Back in Marseille, word spread quickly that Edmond had been taken to the Château d'If. People whispered his name in markets and taverns. Some pitied him, but others shrugged, saying, 'Where there is smoke, there is fire.' Only those who truly loved him—his father, Mercédès, and Monsieur Morrel—refused to believe the accusations.", ar: "عودة إلى مرسيليا، انتشرت الكلمة بسرعة بأن إدموند قد أُخذ إلى شاتو دي إف. همس الناس باسمه في الأسواق والحانات. شعر بعضهم بالأسف عليه، لكن آخرين هزوا أكتافهم قائلين، 'حيثما يوجد دخان، توجد نار.' فقط أولئك الذين أحبوه حقاً - والده، ومرسيدس، والسيد موريل - رفضوا تصديق الاتهامات."},
+        {en: "Mercédès, desperate, went to every official she could reach. 'Edmond is no traitor,' she pleaded. 'His only love is the sea.' But her words met closed doors and deaf ears. No one dared question the orders of the prosecutor. Morrel, Edmond's employer, went personally to the authorities, offering his word as a man of honor that Edmond was loyal. Yet even his respected voice carried no weight against the written denunciation.", ar: "مرسيدس، اليائسة، ذهبت إلى كل مسؤول يمكنها الوصول إليه. 'إدموند ليس خائناً،' توسلت. 'حبه الوحيد هو البحر.' لكن كلماتها واجهت أبواباً مغلقة وآذاناً صماء. لم يجرؤ أحد على استجواب أوامر المدعي العام. موريل، صاحب عمل إدموند، ذهب شخصياً إلى السلطات، مقدماً كلمته كرجل شرف بأن إدموند كان مخلصاً. ومع ذلك، لم يكن لصوته المحترم أي وزن ضد الإدانة المكتوبة."},
+        {en: "Enemies in the Shadows", ar: "الأعداء في الظلال"},
+        {en: "While the innocent fought for Edmond, his enemies quietly rejoiced. Danglars, relieved to see the young sailor removed from command, already dreamed of power within the company. 'With Dantès gone, I can shape the future of the Pharaon as I please,' he thought. Fernand, meanwhile, turned his eyes to Mercédès. He visited her often, pretending to be her comfort.", ar: "بينما كان الأبرياء يقاتلون من أجل إدموند، ابتهج أعداؤه بهدوء. دانغلار، الذي شعر بالارتياح لرؤية البحار الشاب يُعزل من القيادة، كان يحلم بالفعل بالسلطة داخل الشركة. 'مع رحيل دانتيس، يمكنني تشكيل مستقبل الفرعون كما يحلو لي،' فكر. في الوقت نفسه، وجه فيرناند نظره إلى مرسيدس. زارها كثيراً، متظاهراً بأنه عزاؤها."},
+        {en: "'I know you suffer,' he told her softly. 'But Edmond is gone. They will not free him. You must not waste your youth in waiting.' But Mercédès shook her head, her eyes filled with fire. 'I belong to Edmond. Until the day he returns, I will not listen to another.' Her loyalty stabbed Fernand with pain, but also fed his anger. 'Then let him rot in the Château d'If!' he muttered to himself. 'One day you will have no choice but to turn to me.'", ar: "'أعلم أنك تعانين،' قال لها بهدوء. 'لكن إدموند رحل. لن يطلقوا سراحه. يجب ألا تضيعي شبابك في الانتظار.' لكن مرسيدس هزت رأسها، وعيناها مليئة بالحريق. 'أنا أنتمي إلى إدموند. حتى اليوم الذي يعود فيه، لن أستمع إلى أي شخص آخر.' طعن ولاؤها فيرناند بالألم، لكنه غذى غضبه أيضاً. 'إذن دعه يتعفن في شاتو دي إف!' تمتم في نفسه. 'يوماً ما لن يكون لديك خيار سوى اللجوء إليَّ.'"},
+        {en: "Life Behind Bars", ar: "الحياة خلف القضبان"},
+        {en: "In the Château d'If, Edmond experienced the slow death of hope. The prison was a fortress of stone, standing on a lonely island, its windows barred and its corridors damp with sea air. When Edmond first arrived, he begged for mercy. 'There is a mistake,' he cried to the jailer. 'I am innocent!' The jailer laughed cruelly. 'All here say the same, young man. Yet they remain.'", ar: "في شاتو دي إف، عانى إدموند من الموت البطيء للأمل. كان السجن حصناً من الحجر، يقف على جزيرة معزولة، ونوافذه مسدودة وممراته رطبة بهواء البحر. عندما وصل إدموند لأول مرة، توسل طلباً للرحمة. 'هناك خطأ،' صرخ للسجان. 'أنا بريء!' ضحك السجان بقسوة. 'كل من هنا يقول نفس الشيء يا فتى. ومع ذلك يظلون.'"},
+        {en: "Edmond was dragged through a long corridor lit only by torches. The smell of salt and mildew clung to the air. Guards mocked him as they pushed him into a narrow cell with a straw bed, a broken jug for water, and walls damp with cold. 'This is your palace, captain,' one guard sneered. Edmond's heart sank. The word 'captain,' once a promise of honor, now sounded like an insult.", ar: "تم سحب إدموند عبر ممر طويل مضاء فقط بالمشاعل. التصقت رائحة الملح والعفن بالهواء. استهزأ به الحراس بينما دفعوه إلى زنزانة ضيقة بسرير من القش، وإبريق ماء مكسور، وجدران رطبة باردة. 'هذا قصرك أيها القبطان،' سخر أحد الحراس. غرق قلب إدموند. كلمة 'قبطان'، التي كانت ذات يوم وعداً بالشرف، بدت الآن وكأنها إهانة."},
+        {en: "He collapsed on the straw, covering his face with his hands. In a single day he had lost his freedom, his father, his love, and his future. He cried out to the heavens, 'Why am I here? What crime have I committed?' But the stones gave no answer.", ar: "انهار على القش، مغطياً وجهه بيديه. في يوم واحد فقد حريته، ووالده، وحبه، ومستقبله. صرخ إلى السماء، 'لماذا أنا هنا؟ أي جريمة ارتكبت؟' لكن الحجارة لم تجب."},
+        {en: "Days passed into weeks, weeks into months. Edmond's youthful energy drained away, replaced by despair. He counted the stones in his cell, traced patterns in the cracks of the wall, and listened endlessly to the sea pounding against the rocks outside. At times he shouted his innocence into the darkness, but no one listened. His only visitors were the guards who brought him bread and water.", ar: "مرت الأيام لتصبح أسابيع، والأسابيع لتصبح أشهر. استنزفت طاقة إدموند الشابة، وحل محلها اليأس. عد الحجارة في زنزانته، وتتبع الأنماط في شقوق الجدار، واستمع بلا نهاية إلى البحر وهو يدق على الصخور في الخارج. أحياناً كان يصرخ ببراءته في الظلام، لكن لم يستمع أحد. زواره الوحيدون كانوا الحراس الذين يجلبون له الخبز والماء."},
+        {en: "The Suffering of His Father", ar: "معاناة والده"},
+        {en: "Back in Marseille, Edmond's father grew weaker each day. Without his son's support, the old man fell into poverty and despair. He refused food, his only comfort the memory of Edmond's voice. Morrel, kind-hearted and loyal, tried to help him, but grief was stronger than charity. 'Your son is innocent,' Morrel told him. 'I swear to you, I will not abandon him.' The old man squeezed his hand weakly. 'Tell him ... tell my Edmond ... that I loved him.' Soon after, his frail heart gave out, and he died alone, whispering his son's name.", ar: "عودة إلى مرسيليا، كان والد إدموند يضعف كل يوم. بدون دعم ابنه، سقط الرجل العجوز في الفقر واليأس. رفض الطعام، وكان عزاؤه الوحيد هو ذكرى صوت إدموند. حاول موريل، الطيب القلب والمخلص، مساعدته، لكن الحزن كان أقوى من الصدقة. 'ابنك بريء،' قال له موريل. 'أقسم لك، لن أتخلى عنه.' ضغط الرجل العجوز على يده بضعف. 'أخبره ... أخبر إدموند ... أنني أحببته.' بعد فترة وجيزة، توقف قلبه الضعيف، ومات وحيداً، يهمس باسم ابنه."},
+        {en: "Mercédès's Despair", ar: "يأس مرسيدس"},
+        {en: "For Mercédès, each day without Edmond was torture. She waited at the shore, gazing at the island prison across the water, as if her eyes could pierce the walls and reach him. She prayed constantly for his return, refusing every suggestion that she should forget him. Her beauty and loyalty only increased Fernand's obsession. He promised himself that if Edmond never returned, Mercédès would one day be his, no matter the cost.", ar: "بالنسبة لمرسيدس، كان كل يوم بدون إدموند بمثابة تعذيب. انتظرت على الشاطئ، محدقة في سجن الجزيرة عبر الماء، وكأن عينيها يمكن أن تخترق الجدران وتصل إليه. صلت باستمرار من أجل عودته، رافضة كل اقتراح بأن تنساه. زاد جمالها وولاؤها من هوس فيرناند فقط. وعد نفسه أنه إذا لم يعد إدموند أبداً، فإن مرسيدس ستصبح له يوماً ما، مهما كان الثمن."},
+        {en: "Villefort's Ambition", ar: "طموح فيلفور"},
+        {en: "Meanwhile, Gérard de Villefort enjoyed the rewards of his betrayal. By sending Edmond to prison and destroying the letter, he had secured his position with the royalists. He was praised for his vigilance, promoted for his loyalty, and prepared for marriage into a powerful family. Yet sometimes, late at night, he dreamed of Edmond's face—honest, confused, and pleading.", ar: "في الوقت نفسه، استمتع جيرارد دو فيلفور بمكافآت خيانته. بإرسال إدموند إلى السجن وتدمير الرسالة، كان قد ضمن موقعه مع الملكيين. تم الإشادة ب يقظته، وترقيته لولائه، واستعداده للزواج في عائلة قوية. ومع ذلك، في بعض الأحيان، في وقت متأخر من الليل، كان يحلم بوجه إدموند - صادقاً، ومرتبكاً، ومتوسلاً."}
+    ]
+}
+];
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function isSubHeading(text) {
+        // Short standalone lines with no ending punctuation are treated as section headings
+        return text.trim().split(/\s+/).length <= 5 && !/[.!?']$/.test(text.trim());
+    }
+
+    function makeStorySection(sectionId, storyData) {
+        return `<div class="story-card">
+            ${storyData.map((s, i) => {
+                const id = `${sectionId}_s${i}`;
+                const heading = isSubHeading(s.en);
+                const wordHtml = makeWordSpans(s.en);
+                const cls = heading ? 'sentence sub-heading' : 'sentence';
+                return `<div class="${cls}" id="${id}" data-speak="${cleanForSpeech(s.en)}" onclick="playOne('${id}')">${wordHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let html = '';
+
+    chaptersData.forEach(ch => {
+        const vocabId = `secVocabCh${ch.number}`;
+        const defId = `secDefCh${ch.number}`;
+
+        // Chapter divider
+        html += `<div class="chapter-divider"><h2>Chapter ${ch.number}</h2><p>${ch.title}</p></div>`;
+
+        // Vocabulary section
+        html += `<div class="section-block" id="${vocabId}">
+            <div class="sec-title">📚 Vocabulary — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(vocabId)}
+                <div class="info-box">
+                    <div class="info-title">Key Vocabulary</div>
+                    <div class="vocab">${makePills(ch.vocab, vocabId)}</div>
+                </div>
+            </div>
+        </div>`;
+
+        // Definitions section
+        html += `<div class="section-block" id="${defId}">
+            <div class="sec-title">📝 Definitions — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(defId)}
+                <div class="rules-grid">${ch.definitions.map((d, i) => {
+                    const speakText = cleanForSpeech(d.word) + " | " + d.def;
+                    return makeRuleItem('📖', defId, i, speakText, d.def, d.word);
+                }).join('')}</div>
+            </div>
+        </div>`;
+
+        // Story text section (only if this chapter has story data)
+        if (ch.story && ch.story.length > 0) {
+            const storyId = `secStoryCh${ch.number}`;
+            html += `<div class="section-block" id="${storyId}">
+                <div class="sec-title">📖 Reading Text — Chapter ${ch.number}</div>
+                <div class="sec-body">
+                    ${playBar(storyId)}
+                    ${makeStorySection(storyId, ch.story)}
+                </div>
+            </div>`;
+        }
+    });
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

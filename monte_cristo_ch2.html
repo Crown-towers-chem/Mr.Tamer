@@ -1,0 +1,498 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>The Count of Monte Cristo (Chapter 2)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #004d40; --A2: #00695c; --blue4: #b2dfdb; --blue5: #f0f7f6;
+            --text: #1E293B; --text2: #546e7a; --card: #ffffff; --border: #cfd8dc;
+            --bg: #f3f4f7; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(0, 77, 64, 0.08);
+            --word-highlight: #ffc107;
+            --fab-bg: #263238; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.5rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:900px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);max-width:200px;}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:900px;margin:auto;padding:0 16px;}
+
+        .chapter-divider{text-align:center;margin:34px auto 18px;padding:14px 30px;background:linear-gradient(135deg,var(--A),var(--A2));border-radius:12px;max-width:640px;box-shadow:0 6px 16px rgba(0,0,0,.12);}
+        .chapter-divider h2{margin:0;font-size:22px;color:#fff;font-weight:900;letter-spacing:1px;}
+        .chapter-divider p{margin:4px 0 0;font-size:15px;color:#fff;opacity:.9;font-weight:700;}
+
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:100px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .story-card .story-heading{font-weight:900;color:var(--A);margin-bottom:12px;font-size:15px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:16px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence{background:rgba(255,255,255,0.05);}
+        .sentence.sub-heading{font-weight:900;color:var(--A2);font-size:15px;text-transform:uppercase;letter-spacing:.5px;background:var(--blue4);}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .sentence.active-sent, .pill.active-sent, .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .word.highlight, .rule-item .word.highlight, .pill .word.highlight{background:var(--word-highlight);}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🏰</span><h1>The Count of Monte Cristo - Chapter 2</h1><p class="sub">The Count of Monte Cristo - Chapter 2: A Treacherous Plot</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' ');
+    result = result.replace(/[→]/g, ' ');
+    result = result.replace(/\s+/g, ' ').trim();
+    return result;
+}
+
+// ===================== بيانات المحتوى (The Count of Monte Cristo - Chapters 1-6) =====================
+
+const chaptersData = [
+{
+    number: 2,
+    title: "A Treacherous Plot",
+    vocab: [
+        ["astonishment (n)", "ذهول / دهشة"], ["cling / clung / clung (v)", "يتشبث / يتعلق"], ["collapse (d) (v)", "ينهار"],
+        ["condemn (v)", "يدين / يحكم على"], ["determination (n)", "عزيمة / إصرار"], ["disbelief (n)", "عدم تصديق"],
+        ["drown (ed) (v)", "يغرق / يطفو (على الصوت)"], ["exiled (adj)", "منفي"], ["fortress (n)", "قلعة / حصن"],
+        ["garment (n)", "ثوب / رداء"], ["grief (n)", "حزن / أسى"], ["infamous (adj)", "سيء السمعة"],
+        ["interrogation (n)", "استجواب"], ["bitter (adj)", "مرير / بمرارة"], ["cloud (ed) (v)", "يغيم / يفسد"],
+        ["rumor (ed) (v)", "يشيع (ينشر إشاعات)"], ["bound (adj)", "مقيد"], ["politician (n)", "سياسي"],
+        ["scheme (n)", "مؤامرة / خطة"], ["seal (ed) (n)", "ختم"], ["shackled (adj)", "مكبّل بالأصفاد"],
+        ["sincerity (n)", "صدق / إخلاص"], ["treason (n)", "خيانة عظمى"], ["treacherous (adj)", "خائن / غادر"],
+        ["unshaken (adj)", "ثابت / لا يتزعزع"], ["mourning (n)", "حزن"], ["pale (adj)", "شاحب"],
+        ["plotting (n)", "تآمر"], ["pierce (d) (v)", "يثقب / يخترق"], ["royalist (n)", "ملكي (مؤيد للملكية)"],
+        ["ruin (ed) (v)", "يدمر / يخرب"], ["sacrifice (d) (v)", "يضحي"], ["rival (n)", "منافس"],
+        ["study (n)", "غرفة مكتب"], ["vanish (ed) (v)", "يختفي / يتلاشى"], ["cell (n)", "زنزانة"]
+    ],
+    definitions: [
+        {word: "fiancé(e)", def: "the person engaged to be married"},
+        {word: "envy", def: "feeling of jealousy about someone else's success"},
+        {word: "betrayal", def: "breaking trust by being disloyal"},
+        {word: "destiny", def: "what is meant to happen in the future"},
+        {word: "ceremony", def: "a formal public event"},
+        {word: "affection", def: "great liking or love for someone"}
+    ],
+    story: [
+        {en: "The celebration of Edmond Dantès's betrothal had ended in shock and silence. The music had stopped, the sweets had turned bitter in the mouths of the guests, and Mercédès's white dress, once a symbol of joy, now seemed like a garment of mourning. Edmond had been taken away by soldiers, accused of crimes he did not even understand.", ar: "انتهى احتفال خطوبة إدموند دانتيس في صدمة وصمت. توقفت الموسيقى، وتحولت الحلويات إلى مرارة في أفواه الضيوف، وبدا فستان مرسيدس الأبيض، الذي كان رمزاً للفرح، الآن وكأنه لباس حداد. لقد تم أخذ إدموند بعيداً بواسطة الجنود، متهمًا بجرائم لم يفهمها حتى."},
+        {en: "Mercédès clung to Edmond's father, pale and wet with tears. 'They cannot keep him,' she whispered. 'Edmond is innocent.'", ar: "تشبثت مرسيدس بوالد إدموند، شاحبة ومبللة بالدموع. 'لا يمكنهم حبسه'، همست. 'إدموند بريء.'"},
+        {en: "The old man nodded, though his hands trembled. 'Yes, child, but envy is a cruel enemy. I fear something dark has been planned.'", ar: "أومأ الرجل العجوز برأسه، على الرغم من أن يديه كانتا ترتجفان. 'نعم يا طفلة، لكن الحسد عدو قاسي. أخشى أن شيئاً مظلماً قد تم التخطيط له.'"},
+        {en: "Indeed, outside the walls of their humble home, two men congratulated themselves in secret: Danglars and Fernand. They had succeeded in their scheme, and now they waited for the storm to destroy their rival.", ar: "وبالفعل، خارج جدران منزلهما المتواضع، هنأ رجلان نفسيهما في السر: دانغلار وفيرناند. لقد نجحا في مؤامرتهما، والآن كانا ينتظران العاصفة لتدمير منافسهما."},
+        {en: "The Letter of Betrayal", ar: "رسالة الخيانة"},
+        {en: "The false letter, written by Danglars and delivered by Fernand, had been placed into the hands of Gérard de Villefort, the deputy prosecutor of Marseille. Villefort was a young man of ambition, eager to rise in government. He read the accusation carefully: Edmond Dantès, sailor of the Pharaon, carried a secret letter from Napoleon Bonaparte to his supporters in Paris.", ar: "تم وضع الرسالة المزيفة، التي كتبها دانغلار وسلمها فيرناند، في يدي جيرارد دو فيلفور، نائب المدعي العام في مرسيليا. كان فيلفور شاباً طموحاً، حريصاً على الصعود في الحكومة. قرأ التهمة بعناية: إدموند دانتيس، بحار الفرعون، حمل رسالة سرية من نابليون بونابرت إلى أنصاره في باريس."},
+        {en: "At once, Villefort's face darkened. Though many such letters had been rumored, this one carried danger. The country was ruled by King Louis XVIII, restored to the throne after Napoleon's defeat. Any hint of Bonapartist activity was treated as treason. To protect the king, men had been executed for less.", ar: "على الفور، قَطَبَ فيلفور جبينه. على الرغم من تردد شائعات عن العديد من الرسائل المماثلة، إلا أن هذه الرسالة حملت خطراً. كانت البلاد تحكمها الملك لويس الثامن عشر، الذي أعيد إلى العرش بعد هزيمة نابليون. أي تلميح لنشاط بونابارتي كان يعامل كخيانة. لحماية الملك، تم إعدام رجال لأسباب أقل من ذلك."},
+        {en: "'Bring this Edmond Dantès before me,' Villefort ordered. 'We shall see what truth lies behind his smile.'", ar: "'أحضروا هذا إدموند دانتيس أمامي'، أمر فيلفور. 'سنرى ما هي الحقيقة التي تكمن خلف ابتسامته.'"},
+        {en: "Interrogation", ar: "الاستجواب"},
+        {en: "Edmond was taken into a cold, stone room. His hands were bound, but his spirit was unbroken. He stood tall before the deputy prosecutor, confused but not afraid.", ar: "تم أخذ إدموند إلى غرفة حجرية باردة. كانت يداه مقيدتين، لكن روحه لم تنكسر. وقف شامخاً أمام نائب المدعي العام، مرتبكاً ولكن غير خائف."},
+        {en: "'Monsieur Dantès,' Villefort began, 'you are accused of carrying a letter from the exiled Emperor Napoleon to his supporters in Paris. What say you?'", ar: "'السيد دانتيس'، بدأ فيلفور، 'أنت متهم بحمل رسالة من الإمبراطور المنفي نابليون إلى أنصاره في باريس. ماذا تقول؟'"},
+        {en: "Edmond's eyes widened with astonishment. 'A letter? Yes, I was given a letter on the island of Elba by the dying captain of my ship. He begged me to deliver it, and I promised. I did not even read it. It was an act of duty, nothing more.'", ar: "اتسعت عينا إدموند بذهول. 'رسالة؟ نعم، لقد أُعطيت رسالة في جزيرة إلبا من قبل قبطان سفينتي المحتضر. توسل إليَّ لتوصيلها، ووعدت. لم أقرأها حتى. كان واجباً، لا أكثر.'"},
+        {en: "Villefort leaned forward, his eyes sharp. 'To whom do you know that this letter was addressed?'", ar: "انحنى فيلفور للأمام، وعيناه حادتان. 'إلى من تعرف أن هذه الرسالة كانت موجهة؟'"},
+        {en: "'No, monsieur,' Edmond said honestly. 'I only know it was to be delivered in Paris. I wished only to keep my word to my captain, I am a sailor, not a politician.'", ar: "'لا يا سيدي'، قال إدموند بصدق. 'أنا أعرف فقط أنها كان يجب تسليمها في باريس. لقد أردت فقط الوفاء بوعدي لقبطان سفينتي، أنا بحار، وليس سياسياً.'"},
+        {en: "The sincerity in Edmond's voice would have touched any fair-hearted judge. But Villefort's ambition clouded his sense of justice. For when he broke the seal and read the letter, he discovered a name that would have destroyed his own career: the name of his own father!", ar: "كان من الممكن أن تلمس الصدق في صوت إدموند أي قاضي عادل. لكن طموح فيلفور غطى على حس العدالة لديه. لأنه عندما كسر الختم وقرأ الرسالة، اكتشف اسماً كان من الممكن أن يدمر حياته المهنية: اسم والده!"},
+        {en: "If the letter became public, Villefort's family name would be ruined, and his career destroyed. His heart pounded as he faced the young sailor. Here was a man innocent of plotting, yet carrying evidence that could bring shame upon him.", ar: "إذا أصبحت الرسالة علنية، كان من الممكن أن يتم تدمير اسم عائلة فيلفور، ومسيرته المهنية. خفق قلبه بشدة وهو يواجه البحار الشاب. كان هذا رجلاً بريئاً من التآمر، لكنه كان يحمل أدلة يمكن أن تجلب العار عليه."},
+        {en: "'You admit to carrying this letter?' Villefort demanded.", ar: "'أنت تعترف بأنك حملت هذه الرسالة؟' سأل فيلفور بصرامة."},
+        {en: "'Yes,' Edmond replied. 'But I swear to you, I had no idea of its contents. I would gladly burn it if it causes harm.'", ar: "'نعم'، أجاب إدموند. 'لكني أقسم لك، لم يكن لدي أي فكرة عن محتوياتها. سأحرقها بكل سرور إذا تسببت في ضرر.'"},
+        {en: "Villefort studied Edmond for a long moment. He saw the honesty, the innocence, the youth. Part of him longed to release the boy and clear his name, but his ambition refused.", ar: "درس فيلفور إدموند للحظة طويلة. رأى الصدق والبراءة والشباب. كان جزء منه يتوق إلى إطلاق سراح الصبي وتبرئة اسمه، لكن طموحه رفض."},
+        {en: "Villefort's voice grew cold. 'Edmond Dantès, you have confessed to carrying a letter from the enemy of the king. For this, you are guilty of treason. Guards, take him to the Château d'If!'", ar: "صار صوت فيلفور بارداً. 'إدموند دانتيس، لقد اعترفت بحمل رسالة من عدو الملك. لهذا، أنت مذنب بالخيانة. أيها الحراس، خذوه إلى شاتو دي إف!'"},
+        {en: "'No!' Edmond cried. 'I am innocent! Please, listen to me—' But his words were drowned by the clanging of the prison doors.", ar: "'لا!' صرخ إدموند. 'أنا بريء! أرجوك، استمع إليَّ—' لكن كلماته غرقت في قرقعة أبواب السجن."},
+        {en: "Reactions in Marseille", ar: "ردود الفعل في مرسيليا"},
+        {en: "Within hours, news spread that Edmond had been imprisoned, shock and disbelief filled Marseille. Mercédès refused to believe it. She went from door to door, pleading with officials, crying out that Edmond was no traitor. 'He knows only ships, sails, and the sea,' she said desperately.", ar: "في غضون ساعات، انتشرت أخبار أن إدموند قد تم سجنه، وملأت الصدمة وعدم التصديق مرسيليا. رفضت مرسيدس تصديق ذلك. ذهبت من باب إلى باب، متوسلة إلى المسؤولين، صارخة بأن إدموند ليس خائناً. 'لا يعرف إلا السفن والأشرعة والبحر'، قالت بيأس."},
+        {en: "But her cries fell on deaf ears. The government was afraid of Napoleon's return, and any man accused of serving him was guilty in their eyes.", ar: "لكن صراخها وقع على آذان صماء. كانت الحكومة خائفة من عودة نابليون، وأي رجل متهم بخدمته كان مذنباً في أعينهم."},
+        {en: "Edmond's father grew weaker with grief. He had only his son in the world, and now even that comfort had been taken from him. He sat for hours by the window, staring at the sea, whispering Edmond's name.", ar: "ضعف والد إدموند من شدة الحزن. لم يكن له سوى ابنه في العالم، والآن حتى هذه الراحة قد أُخذت منه. جلس لساعات بجانب النافذة، محدقاً في البحر، ويهمس باسم إدموند."},
+        {en: "Meanwhile, Danglars and Fernand celebrated quietly. Danglars smiled to himself, imagining the Pharaon under his influence now that Edmond was gone. Fernand, though, could only think of Mercédès. He visited her daily, pretending to comfort her, but secretly hoping her despair would push her into his arms. Yet each time, Mercédès turned away, her loyalty to Edmond unshaken.", ar: "في هذه الأثناء، احتفل دانغلار وفيرناند بهدوء. ابتسم دانغلار في نفسه، متخيلاً الفرعون تحت نفوذه الآن بعد أن رحل إدموند. أما فيرناند، فلم يستطع إلا التفكير في مرسيدس. زارها يومياً، متظاهراً بمواساتها، لكنه كان يأمل سراً أن يدفعها يأسها بين ذراعيه. لكن في كل مرة، كانت مرسيدس تبتعد عنه، وولاؤها لإدموند ثابت."},
+        {en: "'I will wait for him,' she said firmly. 'If he is in prison for a hundred years, still I will wait.'", ar: "'سأنتظره،' قالت بحزم. 'إذا كان في السجن مائة عام، سأنتظره.'"},
+        {en: "Her words cut Fernand's heart like a knife.", ar: "قطعت كلماتها قلب فيرناند كالسكين."},
+        {en: "Villefort's Secret", ar: "سر فيلفور"},
+        {en: "That night, Villefort sat in his study, the letter spread before him. His hands shook as he read his father's name once again. It was no secret that Gérard de Villefort's father was a traitor, all his dreams of power would collapse.", ar: "في تلك الليلة، جلس فيلفور في دراسته، والرسالة منتشرة أمامه. ارتجفت يداه وهو يقرأ اسم والده مرة أخرى. لم يكن سراً أن والد جيرارد دو فيلفور كان خائناً، وكل أحلامه في السلطة ستنهار."},
+        {en: "His fiancée's family was royalist, his own career depended on loyalty to the crown. Everything he had worked for could vanish in an instant.", ar: "كانت عائلة خطيبته ملكية، وتعتمد مسيرته المهنية على الولاء للتاج. كل شيء عمل من أجله يمكن أن يختفي في لحظة."},
+        {en: "Without moving, Villefort lifted the letter. With cold determination, he threw the letter into the fire. The flames consumed the paper, turning it into ash.", ar: "بدون حراك، رفع فيلفور الرسالة. بعزيمة باردة، ألقى الرسالة في النار. ألهبت النيران الورق، وحولته إلى رماد."},
+        {en: "Then he whispered, 'Farewell, Edmond Dantès. You are sacrificed for my future.'", ar: "ثم همس، 'وداعاً يا إدموند دانتيس. لقد تم التضحية بك من أجل مستقبلي.'"},
+        {en: "The Journey to the Château d'If", ar: "الرحلة إلى شاتو دي إف"},
+        {en: "At dawn, soldiers dragged Edmond from his cell. Shackled and pale, he was pushed into a small boat which carried him across the waters of Marseille. He looked desperately at the city—the port where he had dreamed of being captain, the house where his father waited, the streets where he had walked with Mercédès. Every sight pierced his heart like a blade.", ar: "عند الفجر، سحب الجنود إدموند من زنزانته. مقيداً بالسلاسل وشاحباً، تم دفعه إلى قارب صغير حمله عبر مياه مرسيليا. نظر بيأس إلى المدينة - الميناء حيث حلم بأن يكون قبطاناً، والمنزل حيث انتظر والده، والشوارع التي سار فيها مع مرسيدس. كل مشهد طعن قلبه كالنصل."},
+        {en: "'Where are you taking me?' he cried.", ar: "'إلى أين تأخذونني؟' صرخ."},
+        {en: "'To the Château d'If,' one guard replied grimly.", ar: "'إلى شاتو دي إف'، أجاب أحد الحراس بوجه عبوس."},
+        {en: "Edmond's blood turned cold. The Château d'If was a fortress-prison built on a rocky island, infamous for housing traitors and prisoners. Few who entered its gates ever returned.", ar: "تجمد دم إدموند. كان شاتو دي إف سجناً حصيناً بني على جزيرة صخرية، سيئ السمعة لاحتوائه على الخونة والسجناء. قلة هم الذين دخلوا بواباته وعادوا."},
+        {en: "As the boat approached the dark stone walls rising from the sea, Edmond's spirit sank. He stretched out his hands toward the city, shouting, 'Mercédès! Father! Help me!' But no voice answered, only the crash of the waves against the rocks.", ar: "مع اقتراب القارب من الجدران الحجرية المظلمة الناشئة من البحر، غرقت روح إدموند. مدّ يديه نحو المدينة، صارخاً، 'مرسيدس! أبي! ساعدوني!' لكن لم يجب أي صوت، سوى ارتطام الأمواج بالصخور."},
+        {en: "As the doors of the prison shut, he felt the world of freedom and love slip away, leaving only hollow pain within him.", ar: "عندما أغلقت أبواب السجن، شعر بعالم الحرية والحب يتلاشى، تاركاً وراءه ألماً أجوفاً فقط."},
+        {en: "The Plot Completed", ar: "إكمال المؤامرة"},
+        {en: "Back in Marseille, Danglars and Fernand exchanged satisfied glances. 'The plan worked,' Danglars said, chuckling grimly.", ar: "عودة إلى مرسيليا، تبادل دانغلار وفيرناند نظرات رضا. 'الخطة نجحت'، قال دانغلار، ضاحكاً بمرارة."},
+        {en: "Fernand nodded, his eyes fixed on Mercédès from a distance. 'Yes, gone. And now she will be mine.'", ar: "أومأ فيرناند برأسه، وعيناه مثبتتان على مرسيدس من بعيد. 'نعم، لقد رحل. والآن ستكون لي.'"},
+        {en: "But if Danglars and Fernand knew the truth—that Edmond was imprisoned, his spirit lived on in the heart of Mercédès, and no chains could break that bond.", ar: "لكن إذا كان دانغلار وفيرناند يعرفان الحقيقة - أن إدموند كان مسجوناً، كانت روحه لا تزال حية في قلب مرسيدس، ولا قيود يمكنها كسر تلك الرابطة."}
+    ]
+}
+];
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function isSubHeading(text) {
+        // Short standalone lines with no ending punctuation are treated as section headings
+        return text.trim().split(/\s+/).length <= 5 && !/[.!?']$/.test(text.trim());
+    }
+
+    function makeStorySection(sectionId, storyData) {
+        return `<div class="story-card">
+            ${storyData.map((s, i) => {
+                const id = `${sectionId}_s${i}`;
+                const heading = isSubHeading(s.en);
+                const wordHtml = makeWordSpans(s.en);
+                const cls = heading ? 'sentence sub-heading' : 'sentence';
+                return `<div class="${cls}" id="${id}" data-speak="${cleanForSpeech(s.en)}" onclick="playOne('${id}')">${wordHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let html = '';
+
+    chaptersData.forEach(ch => {
+        const vocabId = `secVocabCh${ch.number}`;
+        const defId = `secDefCh${ch.number}`;
+
+        // Chapter divider
+        html += `<div class="chapter-divider"><h2>Chapter ${ch.number}</h2><p>${ch.title}</p></div>`;
+
+        // Vocabulary section
+        html += `<div class="section-block" id="${vocabId}">
+            <div class="sec-title">📚 Vocabulary — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(vocabId)}
+                <div class="info-box">
+                    <div class="info-title">Key Vocabulary</div>
+                    <div class="vocab">${makePills(ch.vocab, vocabId)}</div>
+                </div>
+            </div>
+        </div>`;
+
+        // Definitions section
+        html += `<div class="section-block" id="${defId}">
+            <div class="sec-title">📝 Definitions — Chapter ${ch.number}</div>
+            <div class="sec-body">
+                ${playBar(defId)}
+                <div class="rules-grid">${ch.definitions.map((d, i) => {
+                    const speakText = cleanForSpeech(d.word) + " | " + d.def;
+                    return makeRuleItem('📖', defId, i, speakText, d.def, d.word);
+                }).join('')}</div>
+            </div>
+        </div>`;
+
+        // Story text section (only if this chapter has story data)
+        if (ch.story && ch.story.length > 0) {
+            const storyId = `secStoryCh${ch.number}`;
+            html += `<div class="section-block" id="${storyId}">
+                <div class="sec-title">📖 Reading Text — Chapter ${ch.number}</div>
+                <div class="sec-body">
+                    ${playBar(storyId)}
+                    ${makeStorySection(storyId, ch.story)}
+                </div>
+            </div>`;
+        }
+    });
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

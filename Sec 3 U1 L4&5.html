@@ -1,0 +1,616 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Tamer Algaml</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201061890855" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01061890855
+    </a>
+    <a href="https://wa.me/+201061890855" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 3 - Unit 1: Beyond the White Coat (Lessons 4 & 5)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🩺</span><h1>Unit 1: Beyond the White Coat</h1><p class="sub">Sec 3 - Lessons 4 & 5 (My Blog Post)</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 3 - Unit 1 - Lessons 4 & 5) =====================
+
+// 1. Key Vocabulary
+const keyVocabL4L5 = [
+    ["clutch(ed) (v)", "يمسك بقوة"],
+    ["forehead(n)", "جبهة/جيين"],
+    ["groan(ed) (n - v)", "يئن/تأوه"],
+    ["moan(ed) (n - v)", "يئن/يئن"],
+    ["scope (n)", "منظار طبي - مجهر"],
+    ["stitch(ed) (n - v)", "غرزة / يخيط"],
+    ["swallow (ed) (v)", "يبتلع"],
+    ["urgency (n)", "إلحاح - ضرورة"]
+];
+
+// 2. Key Idioms
+const idiomsDataL4L5 = [
+    ["pale as a ghost", "شاحب جداً/باهت"],
+    ["rain cats and dogs", "تمطر بغزارة"],
+    ["soaked to the skin", "مبتل تماماً"]
+];
+
+// 3. Accumulative Vocabulary
+const accVocabL4L5 = [
+    ["appointment (n)", "موعد"],
+    ["beeping (n / adj)", "صوت صفير متكرر"],
+    ["bleed-bled-bled (v)", "ينزف"],
+    ["catchy (adj)", "جذاب"],
+    ["ceremony (n)", "مراسم - احتفال"],
+    ["condition (n)", "حالة - ظرف"],
+    ["engaging (adj)", "مثير للاهتمام - مشوق"],
+    ["flexible (adj)", "مرن"],
+    ["gratitude (n)", "امتنان - عرفان"],
+    ["hesitation (n)", "تردد"],
+    ["miserable (adj)", "بائس - تعيس"],
+    ["prescription (n)", "وصفة طبية (روشتة)"],
+    ["purpose (n)", "غرض"],
+    ["relief (n)", "راحة / زوال الضيق"],
+    ["reminder (n)", "تذكير/مذكر"],
+    ["remove(d) (v)", "يزيل"],
+    ["soaked (adj)", "مبتل تماماً"],
+    ["state(d) (v/n)", "يصرح / يذكر - حالة"],
+    ["sterile (adj)", "معقم"],
+    ["stethoscope (n)", "سماعة طبية"],
+    ["symptom (n)", "عرض"],
+    ["tear (n)", "دمعة"],
+    ["teenager (n)", "مراهق"],
+    ["temperature (n)", "درجة الحرارة"],
+    ["viral (adj)", "فيروسي"]
+];
+
+// 4. Definitions
+const defsDataL4L5 = [
+    {word: "clutch(ed) (v)", def: "to hold something tightly and suddenly, especially because you are afraid, hurt, or in pain"},
+    {word: "forehead (n)", def: "the part of your face above your eyes and below your hair"},
+    {word: "groan(ed) (v)", def: "to make a deep long sound showing pain, unhappiness, or annoyance"},
+    {word: "moan(ed) (v)", def: "to make a low sound expressing pain or sadness"},
+    {word: "scope (n)", def: "a medical instrument used to look inside part of the body"},
+    {word: "stitch(ed) (v)", def: "to sew the edges of a wound together with a needle and thread"},
+    {word: "swallow(ed) (v)", def: "to cause food or drink to move from your mouth down into your stomach"}
+];
+
+// 5. Synonyms & Antonyms
+const synDataL4L5 = [
+    {word: "clutch (v)", syn: "grasp, grip, seize"},
+    {word: "groan (v)", syn: "moan, sigh, grumble"},
+    {word: "stitch (v)", syn: "sew, mend, fasten"},
+    {word: "stitch (n)", syn: "sudden pain"},
+    {word: "urgency(n)", syn: "importance, necessity, pressure, immediacy"}
+];
+
+const antDataL4L5 = [
+    {word: "clutch (v)", ant: "release, let go, drop, free"},
+    {word: "groan/moan (v)", ant: "cheer, laugh, rejoice"},
+    {word: "urgency(n)", ant: "delay, calm, indifference, postponement"}
+];
+
+// 6. Collocations
+const collocationsDataL4L5 = [
+    ["catch/grab attention", "يجذب الانتباه"],
+    ["feel miserable", "يبدو تعيساً / يشعر بالبؤس"],
+    ["give a prescription", "يعطي وصفة طبية"],
+    ["give instructions", "يعطي تعليمات"],
+    ["save lives", "ينقذ الأرواح"],
+    ["share experience / story", "يشارك تجربة / قصة"],
+    ["take X-rays", "يأخذ أشعة سينية"]
+];
+
+// 7. Expressions & Prepositions
+const exprDataL4L5 = [
+    ["come to an end", "ينتهي"],
+    ["be covered in", "مغطى بـ"],
+    ["be filled with", "مملوء بـ"],
+    ["life-saving", "منقذ للحياة"],
+    ["under pressure", "تحت الضغط"],
+    ["without hesitation", "دون تردد"]
+];
+
+// 8. Verb + Prepositions (Phrasal Verbs)
+const phrasalVerbsDataL4L5 = [
+    ["check up (on)", "يتفقد / يفحص"],
+    ["clutch at", "يمسك بقوة بـ"],
+    ["cry out", "يصرخ بالبكاء"],
+    ["deal with", "يتعامل مع"],
+    ["fill ... with", "يملا ... بـ"],
+    ["run into", "يصادف / يقابل بالصدفة"],
+    ["rush in", "يدخل مسرعاً"],
+    ["stitch up", "يخيط الجرح (يغزره)"],
+    ["thank ... for", "يشكر ... على"]
+];
+
+// 9. Derivatives
+const derivativesDataL4L5 = [
+    {word: "clutch", forms: ["clutch (v)", "clutch (n)"], ex: "He clutched the rope tightly, so he did not fall. / His strong clutch at the rope stopped him from falling."},
+    {word: "groan", forms: ["groan (v)", "groan (n)"], ex: "The fans groaned when the ball missed the goal. / There was a groan from the fans when the ball missed the goal."},
+    {word: "moan", forms: ["moan (v)", "moan (n)"], ex: "The patient moaned all night because of the pain in her chest. / The moan of the patient made us feel sorry for him."},
+    {word: "stitch", forms: ["stitch (v)", "stitch (n)"], ex: "The surgeon stitched the wound. / The wound needed three stitches."}
+];
+
+// 10. Reading Text (Lesson 4)
+const readingTextL4 = [
+    {en: "Last night, paramedics rushed in with a man injured in a car crash. He had broken his leg before arrival, and his face was covered in blood. Nurses quickly took him for X-rays while Dr. Maha prepared to stitch a deep cut on his forehead.", ar: "في الليلة الماضية، هرع المسعفون ورجل مصاب في حادث سيارة. كان قد كسر ساقه قبل الوصول، وكان وجهه مغطى بالدم. أخذته الممرضات بسرعة لأشعة سينية بينما استعدت الدكتورة ماها لخياطة جرح عميق في جبهته."},
+    {en: "'Teamwork saved him,' said the emergency room 'ER director' proudly. Outside, it was raining cats and dogs as Dr. Basem ran into the hospital, soaked to the skin.", ar: "قال مدير غرفة الطوارئ بفخر: 'العمل الجماعي أنقذه'. في الخارج، كانت السماء تمطر بغزارة بينما ركض د. باسم إلى المستشفى، مبتلاً تماماً."},
+    {en: "Inside, the emergency room was in full chaos—patients groaning, nurses hurrying, and machines beeping non-stop. In one corner, a teenager with a broken arm moaned quietly. A construction worker, pale as a ghost, clutched his bleeding hand, trying not to cry out.", ar: "في الداخل، كانت غرفة الطوارئ في فوضى عارمة - مرضى يتأوهون، وممرضات يسرعن، وآلات تصدر صفيراً متواصلاً. في إحدى الزوايا، كان مراهق ذو ذراع مكسورة يئن بهدوء. عامل بناء، شاحب كالشبح، يمسك بيده النازفة محاولاً ألا يصرخ."},
+    {en: "Nurse Noura, calm under pressure, gave clear and confident instructions. 'Prepare the sterile equipment and state its condition before use,' she ordered.", ar: "أعطت الممرضة نورا، التي كانت هادئة تحت الضغط، تعليمات واضحة وواثقة. 'تجهيز المعدات المعقمة واذكر حالتها قبل الاستخدام،' أمرت."},
+    {en: "Suddenly, the ER doors flew open. A panicked mother rushed in, holding her toddler. 'He's not responding!' she shouted. The child had swallowed a coin. Without hesitation, the team jumped into action.", ar: "فجأة، انفتحت أبواب غرفة الطوارئ على مصراعيها. دخلت أم مذعورة مسرعة، ممسكة بطفلها الصغير. 'إنه لا يستجيب!' صرخت. كان الطفل قد ابتلع عملة معدنية. دون تردد، قفز الفريق إلى العمل."},
+    {en: "Using a flexible scope, they carefully removed the coin. Moments later, the child opened his eyes. The mother wept with relief and gratitude. Around her, staff members smiled—some hiding their own tears.", ar: "باستخدام منظار مرن، أزالوا العملة بحذر. بعد لحظات، فتح الطفل عينيه. بكت الأم بارتياح وامتنان. حولها، ابتسم أعضاء الطاقم - بعضهم يخفي دموعه."},
+    {en: "As the sun began to rise, calm slowly returned. Dr. Basem sat down, exhausted. Around him, the team cleaned up and checked medical charts. Another night filled with fear, urgency, and life-saving teamwork had come to an end.", ar: "مع بدء شروق الشمس، عاد الهدوء ببطء. جلس د. باسم، منهكاً. من حوله، قام الفريق بتنظيف وفحص السجلات الطبية. ليلة أخرى مليئة بالخوف والإلحاح والعمل الجماعي المنقذ للحياة قد انتهت."}
+];
+
+// 11. Reading Text (Lesson 5)
+const readingTextL5 = [
+    {en: "Hello everyone! I want to share something that happened to me recently. About two weeks ago, I started to feel a little tired. I also had a small cough. I didn't think it was very serious at first.", ar: "مرحباً بالجميع! أريد أن أشارك شيئاً حدث لي مؤخراً. منذ حوالي أسبوعين، بدأت أشعر بالإرهاق قليلاً. كان لدي أيضاً سعال خفيف. لم أعتقد أنه خطير جداً في البداية."},
+    {en: "But then, the symptoms got much worse. My throat was very sore, and my nose was running all the time. I also had a bad headache and felt very tired. It was difficult to sleep at night because of the cough.", ar: "لكن بعد ذلك، ساءت الأعراض كثيراً. كان حلقي مؤلماً جداً، وأنفي يسيل طوال الوقت. كان لدي أيضاً صداع شديد وشعرت بتعب شديد. كان من الصعب النوم في الليل بسبب السعال."},
+    {en: "I felt really miserable and uncomfortable. After a few days, I decided I needed to see a doctor.", ar: "شعرت بالبؤس وعدم الراحة حقاً. بعد بضعة أيام، قررت أنني بحاجة لرؤية طبيب."},
+    {en: "So, I called my clinic and made an appointment. When I arrived, the waiting room was full of other people who also looked sick.", ar: "لذلك، اتصلت بعيادتي وحددت موعداً. عندما وصلت، كان غرفة الانتظار مليئة بأشخاص آخرين بدوا مرضى أيضاً."},
+    {en: "After a short wait, the doctor called my name. He asked me many questions about my symptoms and how long I had felt bad.", ar: "بعد انتظار قصير، نادى الطبيب على اسمي. طرح علي العديد من الأسئلة حول الأعراض ومدة شعوري بالسوء."},
+    {en: "Then, he checked my throat, listened to my chest with a stethoscope, and took my temperature. He said I had a severe viral cold.", ar: "ثم، فحص حلقي، واستمع إلى صدري بالسماعة الطبية، وقاس درجة حرارتي. قال إنني مصاب بنزلة برد فيروسية شديدة."},
+    {en: "The doctor gave me a prescription for some medicine to help with the symptoms. He also told me to rest a lot and drink many warm liquids like tea.", ar: "أعطاني الطبيب وصفة طبية لبعض الأدوية للمساعدة في تخفيف الأعراض. كما نصحني بالراحة كثيراً وشرب الكثير من السوائل الدافئة مثل الشاي."},
+    {en: "I went home, took the medicine, and tried to sleep as much as possible. Slowly, after about three or four days, I started to feel much better.", ar: "ذهبت إلى المنزل، وتناولت الدواء، وحاولت النوم قدر الإمكان. ببطء، بعد حوالي ثلاثة أو أربعة أيام، بدأت أشعر بتحسن كبير."},
+    {en: "Now, I am healthy again, and I feel very happy about it! This experience reminded me how important our health is. It's also good to know that doctors are there to help us when we need them.", ar: "الآن، أنا بصحة جيدة مرة أخرى، وأشعر بسعادة غامرة! ذكرتني هذه التجربة بمدى أهمية صحتنا. ومن الجيد أيضاً أن نعرف أن الأطباء موجودون لمساعدتنا عندما نحتاجهم."}
+];
+
+
+// ===================== بناء الواجهة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    // إضافة المشتقات (Derivatives) بشكل خاص
+    function makeDerivativeItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (keyVocabL4L5 && keyVocabL4L5.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary (Lessons 4 & 5)</div><div class="vocab">${makePills(keyVocabL4L5, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Key Idioms
+    if (idiomsDataL4L5 && idiomsDataL4L5.length > 0) {
+        sections.push({ title:"💡 Key Idioms", id:"secIdioms", content: `<div class="rules-grid">${idiomsDataL4L5.map((e,i) => makeRuleItem('✨', 'secIdioms', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 3. Accumulative Vocabulary
+    if (accVocabL4L5 && accVocabL4L5.length > 0) {
+        sections.push({ title:"📚 Accumulative Vocabulary", id:"secAccVocab", content: `<div class="info-box"><div class="info-title">Accumulative Vocabulary</div><div class="vocab">${makePills(accVocabL4L5, "secAccVocab")}</div></div>` });
+    }
+
+    // 4. Definitions
+    if (defsDataL4L5 && defsDataL4L5.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${defsDataL4L5.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    // 5. Synonyms & Antonyms
+    if (synDataL4L5 && synDataL4L5.length > 0) {
+        sections.push({ title:"🔄 Synonyms", id:"secSyn", content: `<div class="rules-grid">${synDataL4L5.map((s,i) => makeRuleItem('↔️', 'secSyn', i, s.word + " | " + s.syn, s.syn, s.word)).join('')}</div>` });
+    }
+    if (antDataL4L5 && antDataL4L5.length > 0) {
+        sections.push({ title:"🚫 Antonyms", id:"secAnt", content: `<div class="rules-grid">${antDataL4L5.map((a,i) => makeRuleItem('🛑', 'secAnt', i, a.word + " | " + a.ant, a.ant, a.word)).join('')}</div>` });
+    }
+
+    // 6. Collocations
+    if (collocationsDataL4L5 && collocationsDataL4L5.length > 0) {
+        sections.push({ title:"🔗 Collocations", id:"secCollocations", content: `<div class="rules-grid">${collocationsDataL4L5.map((c,i) => makeRuleItem('🔗', 'secCollocations', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 7. Expressions & Prepositions
+    if (exprDataL4L5 && exprDataL4L5.length > 0) {
+        sections.push({ title:"💬 Expressions & Prepositions", id:"secExpr", content: `<div class="rules-grid">${exprDataL4L5.map((e,i) => makeRuleItem('💡', 'secExpr', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 8. Verb + Prepositions
+    if (phrasalVerbsDataL4L5 && phrasalVerbsDataL4L5.length > 0) {
+        sections.push({ title:"⚡ Verb + Prepositions", id:"secPhrasal", content: `<div class="rules-grid">${phrasalVerbsDataL4L5.map((p,i) => makeRuleItem('⚡', 'secPhrasal', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 9. Derivatives
+    if (derivativesDataL4L5 && derivativesDataL4L5.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesDataL4L5.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 10. Reading Text (Lesson 4)
+    if (readingTextL4 && readingTextL4.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 4)", id:"secReadL4", content: makeStorySection("A Night in the Emergency Room", readingTextL4) });
+    }
+
+    // 11. Reading Text (Lesson 5)
+    if (readingTextL5 && readingTextL5.length > 0) {
+        sections.push({ title:"📖 Reading Text (Lesson 5)", id:"secReadL5", content: makeStorySection("My Unwelcome Visitor: A Recent Cold Experience", readingTextL5) });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>
